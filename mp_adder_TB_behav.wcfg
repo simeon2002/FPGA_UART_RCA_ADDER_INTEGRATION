@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="mp_adder_TB_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="mp_adder_TB" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="479992fs"></ZoomStartTime>
+      <ZoomEndTime time="480002fs"></ZoomEndTime>
+      <Cursor1Time time="480000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="320"></NameColumnWidth>
+      <ValueColumnWidth column_width="110"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="34" />
+   <wvobject type="logic" fp_name="/mp_adder_TB/rClk">
+      <obj_property name="ElementShortName">rClk</obj_property>
+      <obj_property name="ObjectShortName">rClk</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/mp_adder_TB/rRst">
+      <obj_property name="ElementShortName">rRst</obj_property>
+      <obj_property name="ObjectShortName">rRst</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/mp_adder_TB/rStart">
+      <obj_property name="ElementShortName">rStart</obj_property>
+      <obj_property name="ObjectShortName">rStart</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/mp_adder_TB/rA">
+      <obj_property name="ElementShortName">rA[127:0]</obj_property>
+      <obj_property name="ObjectShortName">rA[127:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/mp_adder_TB/rB">
+      <obj_property name="ElementShortName">rB[127:0]</obj_property>
+      <obj_property name="ObjectShortName">rB[127:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/mp_adder_TB/wRes">
+      <obj_property name="ElementShortName">wRes[128:0]</obj_property>
+      <obj_property name="ObjectShortName">wRes[128:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/mp_adder_TB/wDone">
+      <obj_property name="ElementShortName">wDone</obj_property>
+      <obj_property name="ObjectShortName">wDone</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/mp_adder_TB/rExpectedResult">
+      <obj_property name="ElementShortName">rExpectedResult[128:0]</obj_property>
+      <obj_property name="ObjectShortName">rExpectedResult[128:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider25" type="divider">
+      <obj_property name="label">mux_a and mux_b and muc_carry</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/mp_adder_TB/mp_adder_INST/muxA_sel">
+      <obj_property name="ElementShortName">muxA_sel</obj_property>
+      <obj_property name="ObjectShortName">muxA_sel</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/mp_adder_TB/mp_adder_INST/muxA_Out">
+      <obj_property name="ElementShortName">muxA_Out[127:0]</obj_property>
+      <obj_property name="ObjectShortName">muxA_Out[127:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/mp_adder_TB/mp_adder_INST/muxB_sel">
+      <obj_property name="ElementShortName">muxB_sel</obj_property>
+      <obj_property name="ObjectShortName">muxB_sel</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/mp_adder_TB/mp_adder_INST/muxB_Out">
+      <obj_property name="ElementShortName">muxB_Out[127:0]</obj_property>
+      <obj_property name="ObjectShortName">muxB_Out[127:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/mp_adder_TB/mp_adder_INST/muxCarry_sel">
+      <obj_property name="ElementShortName">muxCarry_sel</obj_property>
+      <obj_property name="ObjectShortName">muxCarry_sel</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/mp_adder_TB/mp_adder_INST/muxCarryIn">
+      <obj_property name="ElementShortName">muxCarryIn</obj_property>
+      <obj_property name="ObjectShortName">muxCarryIn</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider26" type="divider">
+      <obj_property name="label">operands: reg a and reg b </obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/mp_adder_TB/mp_adder_INST/regA_D">
+      <obj_property name="ElementShortName">regA_D[127:0]</obj_property>
+      <obj_property name="ObjectShortName">regA_D[127:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/mp_adder_TB/mp_adder_INST/regA_Q">
+      <obj_property name="ElementShortName">regA_Q[127:0]</obj_property>
+      <obj_property name="ObjectShortName">regA_Q[127:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/mp_adder_TB/mp_adder_INST/regB_D">
+      <obj_property name="ElementShortName">regB_D[127:0]</obj_property>
+      <obj_property name="ObjectShortName">regB_D[127:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/mp_adder_TB/mp_adder_INST/regB_Q">
+      <obj_property name="ElementShortName">regB_Q[127:0]</obj_property>
+      <obj_property name="ObjectShortName">regB_Q[127:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider35" type="divider">
+      <obj_property name="label">adder inputs and outputs</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/mp_adder_TB/mp_adder_INST/carry_in">
+      <obj_property name="ElementShortName">carry_in</obj_property>
+      <obj_property name="ObjectShortName">carry_in</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/mp_adder_TB/mp_adder_INST/operandA">
+      <obj_property name="ElementShortName">operandA[15:0]</obj_property>
+      <obj_property name="ObjectShortName">operandA[15:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/mp_adder_TB/mp_adder_INST/operandB">
+      <obj_property name="ElementShortName">operandB[15:0]</obj_property>
+      <obj_property name="ObjectShortName">operandB[15:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/mp_adder_TB/mp_adder_INST/result">
+      <obj_property name="ElementShortName">result[15:0]</obj_property>
+      <obj_property name="ObjectShortName">result[15:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/mp_adder_TB/mp_adder_INST/carry_out">
+      <obj_property name="ElementShortName">carry_out</obj_property>
+      <obj_property name="ObjectShortName">carry_out</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider41" type="divider">
+      <obj_property name="label">result regs</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/mp_adder_TB/mp_adder_INST/regResult">
+      <obj_property name="ElementShortName">regResult[127:0]</obj_property>
+      <obj_property name="ObjectShortName">regResult[127:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/mp_adder_TB/mp_adder_INST/regCout">
+      <obj_property name="ElementShortName">regCout</obj_property>
+      <obj_property name="ObjectShortName">regCout</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider46" type="divider">
+      <obj_property name="label">FSM</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/mp_adder_TB/mp_adder_INST/rFSM_current">
+      <obj_property name="ElementShortName">rFSM_current[2:0]</obj_property>
+      <obj_property name="ObjectShortName">rFSM_current[2:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/mp_adder_TB/mp_adder_INST/wFSM_next">
+      <obj_property name="ElementShortName">wFSM_next[2:0]</obj_property>
+      <obj_property name="ObjectShortName">wFSM_next[2:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/mp_adder_TB/mp_adder_INST/rCnt_Current">
+      <obj_property name="ElementShortName">rCnt_Current[3:0]</obj_property>
+      <obj_property name="ObjectShortName">rCnt_Current[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/mp_adder_TB/mp_adder_INST/wCnt_next">
+      <obj_property name="ElementShortName">wCnt_next[3:0]</obj_property>
+      <obj_property name="ObjectShortName">wCnt_next[3:0]</obj_property>
+   </wvobject>
+</wave_config>

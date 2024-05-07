@@ -1,0 +1,1112 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:35 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Wed Apr 17 11:02:38 2024
+# Process ID: 113812
+# Current directory: /home/sims0702/cdd_lab_2/cdd_lab_2.sim/sim_1/behav/xsim
+# Command line: vivado
+# Log file: /home/sims0702/cdd_lab_2/cdd_lab_2.sim/sim_1/behav/xsim/vivado.log
+# Journal file: /home/sims0702/cdd_lab_2/cdd_lab_2.sim/sim_1/behav/xsim/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /home/sims0702/cdd_lab_2/cdd_lab_2.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2020.1/data/ip'.
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+update_compile_order -fileset sources_1
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+WARNING: [BD 41-1731] Type mismatch between connected pins: /iClk(clk) and /uart_top_0/iClk(undef)
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/sims0702/cdd_lab_2/cdd_lab_2.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/tools/Xilinx/Vivado/2020.1/data/xsim/xsim.ini' copied to run dir:'/home/sims0702/cdd_lab_2/cdd_lab_2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'uart_top_TB' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/sims0702/cdd_lab_2/cdd_lab_2.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj uart_top_TB_vlog.prj
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/sims0702/cdd_lab_2/cdd_lab_2.sim/sim_1/behav/xsim'
+xelab -wto 557fc29781464754a719019d74ccaba4 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot uart_top_TB_behav xil_defaultlib.uart_top_TB xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2020.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2020.1/bin/unwrapped/lnx64.o/xelab -wto 557fc29781464754a719019d74ccaba4 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot uart_top_TB_behav xil_defaultlib.uart_top_TB xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/sims0702/cdd_lab_2/cdd_lab_2.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "uart_top_TB_behav -key {Behavioral:sim_1:Functional:uart_top_TB} -tclbatch {uart_top_TB.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.1
+Time resolution is 1 ps
+source uart_top_TB.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'uart_top_TB_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:11 ; elapsed = 00:00:06 . Memory (MB): peak = 7312.207 ; gain = 145.887 ; free physical = 6452 ; free virtual = 13759
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+WARNING: [BD 41-1731] Type mismatch between connected pins: /iClk(clk) and /uart_top_0/iClk(undef)
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/sims0702/cdd_lab_2/cdd_lab_2.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/tools/Xilinx/Vivado/2020.1/data/xsim/xsim.ini' copied to run dir:'/home/sims0702/cdd_lab_2/cdd_lab_2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'uart_top_TB' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/sims0702/cdd_lab_2/cdd_lab_2.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj uart_top_TB_vlog.prj
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+WARNING: [BD 41-1731] Type mismatch between connected pins: /iClk(clk) and /uart_top_0/iClk(undef)
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/sims0702/cdd_lab_2/cdd_lab_2.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/sims0702/cdd_lab_2/cdd_lab_2.sim/sim_1/behav/xsim'
+xelab -wto 557fc29781464754a719019d74ccaba4 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot uart_top_TB_behav xil_defaultlib.uart_top_TB xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2020.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2020.1/bin/unwrapped/lnx64.o/xelab -wto 557fc29781464754a719019d74ccaba4 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot uart_top_TB_behav xil_defaultlib.uart_top_TB xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2020.1
+Time resolution is 1 ps
+run 10 us
+add_bp {/home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/imports/Downloads/uart_top.v} 84
+add_bp {/home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/imports/Downloads/uart_top.v} 89
+add_bp {/home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/imports/Downloads/uart_top.v} 90
+remove_bps -file {/home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/imports/Downloads/uart_top.v} -line 89
+run all
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+WARNING: [BD 41-1731] Type mismatch between connected pins: /iClk(clk) and /uart_top_0/iClk(undef)
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/sims0702/cdd_lab_2/cdd_lab_2.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/tools/Xilinx/Vivado/2020.1/data/xsim/xsim.ini' copied to run dir:'/home/sims0702/cdd_lab_2/cdd_lab_2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'uart_top_TB' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/sims0702/cdd_lab_2/cdd_lab_2.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj uart_top_TB_vlog.prj
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+WARNING: [BD 41-1731] Type mismatch between connected pins: /iClk(clk) and /uart_top_0/iClk(undef)
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/sims0702/cdd_lab_2/cdd_lab_2.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/sims0702/cdd_lab_2/cdd_lab_2.sim/sim_1/behav/xsim'
+xelab -wto 557fc29781464754a719019d74ccaba4 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot uart_top_TB_behav xil_defaultlib.uart_top_TB xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2020.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2020.1/bin/unwrapped/lnx64.o/xelab -wto 557fc29781464754a719019d74ccaba4 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot uart_top_TB_behav xil_defaultlib.uart_top_TB xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2020.1
+Time resolution is 1 ps
+Stopped at time : 458 ns : File "/home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/imports/Downloads/uart_top.v" Line 84
+run all
+Stopped at time : 966 ns : File "/home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/imports/Downloads/uart_top.v" Line 90
+add_bp {/home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/imports/Downloads/uart_top.v} 102
+run all
+Stopped at time : 970 ns : File "/home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/imports/Downloads/uart_top.v" Line 102
+add_bp {/home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/imports/Downloads/uart_top.v} 111
+remove_bps -file {/home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/imports/Downloads/uart_top.v} -line 111
+add_bp {/home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/imports/Downloads/uart_top.v} 110
+add_bp {/home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/imports/Downloads/uart_top.v} 120
+remove_bps -file {/home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/imports/Downloads/uart_top.v} -line 120
+add_bp {/home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/imports/Downloads/uart_top.v} 119
+add_bp {/home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/imports/Downloads/uart_top.v} 122
+run all
+Stopped at time : 974 ns : File "/home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/imports/Downloads/uart_top.v" Line 119
+run all
+Stopped at time : 974 ns : File "/home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/imports/Downloads/uart_top.v" Line 122
+run all
+Stopped at time : 978 ns : File "/home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/imports/Downloads/uart_top.v" Line 119
+run all
+Stopped at time : 978 ns : File "/home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/imports/Downloads/uart_top.v" Line 122
+run all
+Stopped at time : 982 ns : File "/home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/imports/Downloads/uart_top.v" Line 119
+add_bp {/home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/imports/Downloads/uart_top.v} 120
+remove_bps -file {/home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/imports/Downloads/uart_top.v} -line 122
+remove_bps -file {/home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/imports/Downloads/uart_top.v} -line 119
+run all
+Stopped at time : 1378 ns : File "/home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/imports/Downloads/uart_top.v" Line 120
+run all
+Stopped at time : 1382 ns : File "/home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/imports/Downloads/uart_top.v" Line 102
+run all
+Stopped at time : 1790 ns : File "/home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/imports/Downloads/uart_top.v" Line 120
+add_bp {/home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/imports/Downloads/uart_top.v} 123
+run all
+Stopped at time : 1794 ns : File "/home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/imports/Downloads/uart_top.v" Line 110
+add_bp {/home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/imports/Downloads/uart_top.v} 129
+run all
+Stopped at time : 1798 ns : File "/home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/imports/Downloads/uart_top.v" Line 129
+add_bp {/home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/imports/Downloads/uart_top.v} 78
+run all
+Stopped at time : 1802 ns : File "/home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/imports/Downloads/uart_top.v" Line 78
+run all
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+WARNING: [BD 41-1731] Type mismatch between connected pins: /iClk(clk) and /uart_top_0/iClk(undef)
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/sims0702/cdd_lab_2/cdd_lab_2.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/tools/Xilinx/Vivado/2020.1/data/xsim/xsim.ini' copied to run dir:'/home/sims0702/cdd_lab_2/cdd_lab_2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'uart_top_TB' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/sims0702/cdd_lab_2/cdd_lab_2.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj uart_top_TB_vlog.prj
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+WARNING: [BD 41-1731] Type mismatch between connected pins: /iClk(clk) and /uart_top_0/iClk(undef)
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/sims0702/cdd_lab_2/cdd_lab_2.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/sims0702/cdd_lab_2/cdd_lab_2.sim/sim_1/behav/xsim'
+xelab -wto 557fc29781464754a719019d74ccaba4 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot uart_top_TB_behav xil_defaultlib.uart_top_TB xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2020.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2020.1/bin/unwrapped/lnx64.o/xelab -wto 557fc29781464754a719019d74ccaba4 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot uart_top_TB_behav xil_defaultlib.uart_top_TB xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2020.1
+Time resolution is 1 ps
+Stopped at time : 26 ns : File "/home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/imports/Downloads/uart_top.v" Line 78
+add_bp {/home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/imports/Downloads/uart_top.v} 104
+remove_bps -file {/home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/imports/Downloads/uart_top.v} -line 110
+remove_bps -file {/home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/imports/Downloads/uart_top.v} -line 120
+remove_bps -file {/home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/imports/Downloads/uart_top.v} -line 123
+remove_bps -file {/home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/imports/Downloads/uart_top.v} -line 129
+add_bp {/home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/imports/Downloads/uart_top.v} 89
+remove_bps -file {/home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/imports/Downloads/uart_top.v} -line 90
+remove_bps -file {/home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/imports/Downloads/uart_top.v} -line 89
+remove_bps -file {/home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/imports/Downloads/uart_top.v} -line 84
+remove_bps -file {/home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/imports/Downloads/uart_top.v} -line 78
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+WARNING: [BD 41-1731] Type mismatch between connected pins: /iClk(clk) and /uart_top_0/iClk(undef)
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/sims0702/cdd_lab_2/cdd_lab_2.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/tools/Xilinx/Vivado/2020.1/data/xsim/xsim.ini' copied to run dir:'/home/sims0702/cdd_lab_2/cdd_lab_2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'uart_top_TB' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/sims0702/cdd_lab_2/cdd_lab_2.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj uart_top_TB_vlog.prj
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+WARNING: [BD 41-1731] Type mismatch between connected pins: /iClk(clk) and /uart_top_0/iClk(undef)
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/sims0702/cdd_lab_2/cdd_lab_2.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/sims0702/cdd_lab_2/cdd_lab_2.sim/sim_1/behav/xsim'
+xelab -wto 557fc29781464754a719019d74ccaba4 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot uart_top_TB_behav xil_defaultlib.uart_top_TB xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2020.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2020.1/bin/unwrapped/lnx64.o/xelab -wto 557fc29781464754a719019d74ccaba4 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot uart_top_TB_behav xil_defaultlib.uart_top_TB xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2020.1
+Time resolution is 1 ps
+Stopped at time : 970 ns : File "/home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/imports/Downloads/uart_top.v" Line 102
+run all
+Stopped at time : 970 ns : File "/home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/imports/Downloads/uart_top.v" Line 104
+add_bp {/home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/imports/Downloads/uart_top.v} 84
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+WARNING: [BD 41-1731] Type mismatch between connected pins: /iClk(clk) and /uart_top_0/iClk(undef)
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/sims0702/cdd_lab_2/cdd_lab_2.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/tools/Xilinx/Vivado/2020.1/data/xsim/xsim.ini' copied to run dir:'/home/sims0702/cdd_lab_2/cdd_lab_2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'uart_top_TB' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/sims0702/cdd_lab_2/cdd_lab_2.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj uart_top_TB_vlog.prj
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+WARNING: [BD 41-1731] Type mismatch between connected pins: /iClk(clk) and /uart_top_0/iClk(undef)
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/sims0702/cdd_lab_2/cdd_lab_2.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/sims0702/cdd_lab_2/cdd_lab_2.sim/sim_1/behav/xsim'
+xelab -wto 557fc29781464754a719019d74ccaba4 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot uart_top_TB_behav xil_defaultlib.uart_top_TB xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2020.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2020.1/bin/unwrapped/lnx64.o/xelab -wto 557fc29781464754a719019d74ccaba4 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot uart_top_TB_behav xil_defaultlib.uart_top_TB xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2020.1
+Time resolution is 1 ps
+Stopped at time : 458 ns : File "/home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/imports/Downloads/uart_top.v" Line 84
+run all
+Stopped at time : 970 ns : File "/home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/imports/Downloads/uart_top.v" Line 102
+reset_run synth_1
+update_module_reference design_1_uart_top_0_0
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+Adding component instance block -- xilinx.com:module_ref:Debounce_Switch:1.0 - Debounce_Switch_0
+Adding component instance block -- xilinx.com:module_ref:uart_top:1.0 - uart_top_0
+WARNING: [BD 41-1731] Type mismatch between connected pins: /iClk(clk) and /uart_top_0/iClk(undef)
+Successfully read diagram <design_1> from BD file </home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/bd/design_1/design_1.bd>
+Upgrading '/home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/bd/design_1/design_1.bd'
+INFO: [IP_Flow 19-1972] Upgraded design_1_uart_top_0_0 from uart_top_v1_0 1.0 to uart_top_v1_0 1.0
+WARNING: [BD 41-1731] Type mismatch between connected pins: /iClk(clk) and /uart_top_0_upgraded_ipi/iClk(undef)
+Wrote  : </home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/bd/design_1/design_1.bd> 
+launch_runs synth_1 -jobs 6
+Wrote  : </home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/bd/design_1/design_1.bd> 
+VHDL Output written to : /home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/bd/design_1/synth/design_1.v
+VHDL Output written to : /home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : /home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block uart_top_0 .
+Exporting to file /home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file /home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File /home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+[Wed Apr 17 11:12:56 2024] Launched design_1_uart_top_0_0_synth_1...
+Run output will be captured here: /home/sims0702/cdd_lab_2/cdd_lab_2.runs/design_1_uart_top_0_0_synth_1/runme.log
+[Wed Apr 17 11:12:56 2024] Launched synth_1...
+Run output will be captured here: /home/sims0702/cdd_lab_2/cdd_lab_2.runs/synth_1/runme.log
+launch_runs: Time (s): cpu = 00:00:10 ; elapsed = 00:00:07 . Memory (MB): peak = 7373.230 ; gain = 0.000 ; free physical = 6208 ; free virtual = 13525
+close_bd_design [get_bd_designs design_1]
+Wrote  : </home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+run all
+Stopped at time : 970 ns : File "/home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/imports/Downloads/uart_top.v" Line 104
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+WARNING: [BD 41-1731] Type mismatch between connected pins: /iClk(clk) and /uart_top_0/iClk(undef)
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/sims0702/cdd_lab_2/cdd_lab_2.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/tools/Xilinx/Vivado/2020.1/data/xsim/xsim.ini' copied to run dir:'/home/sims0702/cdd_lab_2/cdd_lab_2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'uart_top_TB' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/sims0702/cdd_lab_2/cdd_lab_2.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj uart_top_TB_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/new/uart_receiver.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module uart_receiver
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/imports/Downloads/uart_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module uart_top
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/imports/Downloads/uart_tx.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module uart_tx
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sim_1/imports/Downloads/uart_top_TB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module uart_top_TB
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+launch_simulation: Time (s): cpu = 00:00:15 ; elapsed = 00:00:09 . Memory (MB): peak = 7373.230 ; gain = 0.000 ; free physical = 6089 ; free virtual = 13491
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+WARNING: [BD 41-1731] Type mismatch between connected pins: /iClk(clk) and /uart_top_0/iClk(undef)
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/sims0702/cdd_lab_2/cdd_lab_2.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/sims0702/cdd_lab_2/cdd_lab_2.sim/sim_1/behav/xsim'
+xelab -wto 557fc29781464754a719019d74ccaba4 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot uart_top_TB_behav xil_defaultlib.uart_top_TB xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2020.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2020.1/bin/unwrapped/lnx64.o/xelab -wto 557fc29781464754a719019d74ccaba4 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot uart_top_TB_behav xil_defaultlib.uart_top_TB xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+ERROR: [VRFC 10-1219] part-select direction is opposite from prefix index direction [/home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/imports/Downloads/uart_top.v:84]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-99] Step results log file:'/home/sims0702/cdd_lab_2/cdd_lab_2.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or '/home/sims0702/cdd_lab_2/cdd_lab_2.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+ERROR: [Common 17-69] Command failed: ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+WARNING: [BD 41-1731] Type mismatch between connected pins: /iClk(clk) and /uart_top_0/iClk(undef)
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/sims0702/cdd_lab_2/cdd_lab_2.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/tools/Xilinx/Vivado/2020.1/data/xsim/xsim.ini' copied to run dir:'/home/sims0702/cdd_lab_2/cdd_lab_2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'uart_top_TB' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/sims0702/cdd_lab_2/cdd_lab_2.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj uart_top_TB_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/new/uart_receiver.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module uart_receiver
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/imports/Downloads/uart_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module uart_top
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/imports/Downloads/uart_tx.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module uart_tx
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sim_1/imports/Downloads/uart_top_TB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module uart_top_TB
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+launch_simulation: Time (s): cpu = 00:00:16 ; elapsed = 00:00:09 . Memory (MB): peak = 7373.230 ; gain = 0.000 ; free physical = 6088 ; free virtual = 13489
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+WARNING: [BD 41-1731] Type mismatch between connected pins: /iClk(clk) and /uart_top_0/iClk(undef)
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/sims0702/cdd_lab_2/cdd_lab_2.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/sims0702/cdd_lab_2/cdd_lab_2.sim/sim_1/behav/xsim'
+xelab -wto 557fc29781464754a719019d74ccaba4 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot uart_top_TB_behav xil_defaultlib.uart_top_TB xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2020.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2020.1/bin/unwrapped/lnx64.o/xelab -wto 557fc29781464754a719019d74ccaba4 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot uart_top_TB_behav xil_defaultlib.uart_top_TB xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+ERROR: [VRFC 10-1219] part-select direction is opposite from prefix index direction [/home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/imports/Downloads/uart_top.v:84]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-99] Step results log file:'/home/sims0702/cdd_lab_2/cdd_lab_2.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or '/home/sims0702/cdd_lab_2/cdd_lab_2.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+ERROR: [Common 17-69] Command failed: ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+WARNING: [BD 41-1731] Type mismatch between connected pins: /iClk(clk) and /uart_top_0/iClk(undef)
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/sims0702/cdd_lab_2/cdd_lab_2.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/tools/Xilinx/Vivado/2020.1/data/xsim/xsim.ini' copied to run dir:'/home/sims0702/cdd_lab_2/cdd_lab_2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'uart_top_TB' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/sims0702/cdd_lab_2/cdd_lab_2.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj uart_top_TB_vlog.prj
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+WARNING: [BD 41-1731] Type mismatch between connected pins: /iClk(clk) and /uart_top_0/iClk(undef)
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/sims0702/cdd_lab_2/cdd_lab_2.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/sims0702/cdd_lab_2/cdd_lab_2.sim/sim_1/behav/xsim'
+xelab -wto 557fc29781464754a719019d74ccaba4 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot uart_top_TB_behav xil_defaultlib.uart_top_TB xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2020.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2020.1/bin/unwrapped/lnx64.o/xelab -wto 557fc29781464754a719019d74ccaba4 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot uart_top_TB_behav xil_defaultlib.uart_top_TB xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+ERROR: [VRFC 10-1219] part-select direction is opposite from prefix index direction [/home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/imports/Downloads/uart_top.v:84]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-99] Step results log file:'/home/sims0702/cdd_lab_2/cdd_lab_2.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or '/home/sims0702/cdd_lab_2/cdd_lab_2.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+ERROR: [Common 17-69] Command failed: ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+WARNING: [BD 41-1731] Type mismatch between connected pins: /iClk(clk) and /uart_top_0/iClk(undef)
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/sims0702/cdd_lab_2/cdd_lab_2.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/tools/Xilinx/Vivado/2020.1/data/xsim/xsim.ini' copied to run dir:'/home/sims0702/cdd_lab_2/cdd_lab_2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'uart_top_TB' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/sims0702/cdd_lab_2/cdd_lab_2.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj uart_top_TB_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/new/uart_receiver.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module uart_receiver
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/imports/Downloads/uart_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module uart_top
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/imports/Downloads/uart_tx.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module uart_tx
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sim_1/imports/Downloads/uart_top_TB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module uart_top_TB
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+launch_simulation: Time (s): cpu = 00:00:16 ; elapsed = 00:00:09 . Memory (MB): peak = 7373.230 ; gain = 0.000 ; free physical = 6075 ; free virtual = 13476
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+WARNING: [BD 41-1731] Type mismatch between connected pins: /iClk(clk) and /uart_top_0/iClk(undef)
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/sims0702/cdd_lab_2/cdd_lab_2.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/sims0702/cdd_lab_2/cdd_lab_2.sim/sim_1/behav/xsim'
+xelab -wto 557fc29781464754a719019d74ccaba4 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot uart_top_TB_behav xil_defaultlib.uart_top_TB xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2020.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2020.1/bin/unwrapped/lnx64.o/xelab -wto 557fc29781464754a719019d74ccaba4 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot uart_top_TB_behav xil_defaultlib.uart_top_TB xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.uart_tx(CLK_FREQ=100,BAUD_RATE=1...
+Compiling module xil_defaultlib.uart_receiver(CLK_FREQ=100,BAUD_...
+Compiling module xil_defaultlib.uart_top(NBYTES=2,CLK_FREQ=100,B...
+Compiling module xil_defaultlib.uart_top_TB
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot uart_top_TB_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2020.1
+Time resolution is 1 ps
+Stopped at time : 458 ns : File "/home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/imports/Downloads/uart_top.v" Line 84
+relaunch_sim: Time (s): cpu = 00:00:18 ; elapsed = 00:00:12 . Memory (MB): peak = 7397.145 ; gain = 23.914 ; free physical = 6056 ; free virtual = 13456
+run all
+Stopped at time : 970 ns : File "/home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/imports/Downloads/uart_top.v" Line 102
+run all
+Stopped at time : 970 ns : File "/home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/imports/Downloads/uart_top.v" Line 104
+run all
+Stopped at time : 1382 ns : File "/home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/imports/Downloads/uart_top.v" Line 102
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+WARNING: [BD 41-1731] Type mismatch between connected pins: /iClk(clk) and /uart_top_0/iClk(undef)
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/sims0702/cdd_lab_2/cdd_lab_2.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/tools/Xilinx/Vivado/2020.1/data/xsim/xsim.ini' copied to run dir:'/home/sims0702/cdd_lab_2/cdd_lab_2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'uart_top_TB' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/sims0702/cdd_lab_2/cdd_lab_2.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj uart_top_TB_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/new/uart_receiver.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module uart_receiver
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/imports/Downloads/uart_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module uart_top
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/imports/Downloads/uart_tx.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module uart_tx
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sim_1/imports/Downloads/uart_top_TB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module uart_top_TB
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+launch_simulation: Time (s): cpu = 00:00:17 ; elapsed = 00:00:09 . Memory (MB): peak = 7397.145 ; gain = 0.000 ; free physical = 6061 ; free virtual = 13462
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+WARNING: [BD 41-1731] Type mismatch between connected pins: /iClk(clk) and /uart_top_0/iClk(undef)
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/sims0702/cdd_lab_2/cdd_lab_2.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/sims0702/cdd_lab_2/cdd_lab_2.sim/sim_1/behav/xsim'
+xelab -wto 557fc29781464754a719019d74ccaba4 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot uart_top_TB_behav xil_defaultlib.uart_top_TB xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2020.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2020.1/bin/unwrapped/lnx64.o/xelab -wto 557fc29781464754a719019d74ccaba4 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot uart_top_TB_behav xil_defaultlib.uart_top_TB xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.uart_tx(CLK_FREQ=100,BAUD_RATE=1...
+Compiling module xil_defaultlib.uart_receiver(CLK_FREQ=100,BAUD_...
+Compiling module xil_defaultlib.uart_top(NBYTES=2,CLK_FREQ=100,B...
+Compiling module xil_defaultlib.uart_top_TB
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot uart_top_TB_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2020.1
+Time resolution is 1 ps
+Stopped at time : 458 ns : File "/home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/imports/Downloads/uart_top.v" Line 84
+relaunch_sim: Time (s): cpu = 00:00:22 ; elapsed = 00:00:14 . Memory (MB): peak = 7402.145 ; gain = 5.000 ; free physical = 6043 ; free virtual = 13444
+run 10 us
+Stopped at time : 970 ns : File "/home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/imports/Downloads/uart_top.v" Line 102
+run 10 us
+Stopped at time : 970 ns : File "/home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/imports/Downloads/uart_top.v" Line 104
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+WARNING: [BD 41-1731] Type mismatch between connected pins: /iClk(clk) and /uart_top_0/iClk(undef)
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/sims0702/cdd_lab_2/cdd_lab_2.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/tools/Xilinx/Vivado/2020.1/data/xsim/xsim.ini' copied to run dir:'/home/sims0702/cdd_lab_2/cdd_lab_2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'uart_top_TB' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/sims0702/cdd_lab_2/cdd_lab_2.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj uart_top_TB_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/new/uart_receiver.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module uart_receiver
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/imports/Downloads/uart_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module uart_top
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/imports/Downloads/uart_tx.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module uart_tx
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sim_1/imports/Downloads/uart_top_TB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module uart_top_TB
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+WARNING: [BD 41-1731] Type mismatch between connected pins: /iClk(clk) and /uart_top_0/iClk(undef)
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/sims0702/cdd_lab_2/cdd_lab_2.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/sims0702/cdd_lab_2/cdd_lab_2.sim/sim_1/behav/xsim'
+xelab -wto 557fc29781464754a719019d74ccaba4 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot uart_top_TB_behav xil_defaultlib.uart_top_TB xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2020.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2020.1/bin/unwrapped/lnx64.o/xelab -wto 557fc29781464754a719019d74ccaba4 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot uart_top_TB_behav xil_defaultlib.uart_top_TB xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.uart_tx(CLK_FREQ=100,BAUD_RATE=1...
+Compiling module xil_defaultlib.uart_receiver(CLK_FREQ=100,BAUD_...
+Compiling module xil_defaultlib.uart_top(NBYTES=2,CLK_FREQ=100,B...
+Compiling module xil_defaultlib.uart_top_TB
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot uart_top_TB_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2020.1
+Time resolution is 1 ps
+Stopped at time : 458 ns : File "/home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/imports/Downloads/uart_top.v" Line 84
+relaunch_sim: Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 7404.145 ; gain = 2.000 ; free physical = 6036 ; free virtual = 13440
+run 10 us
+Stopped at time : 970 ns : File "/home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/imports/Downloads/uart_top.v" Line 102
+run 10 us
+Stopped at time : 970 ns : File "/home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/imports/Downloads/uart_top.v" Line 104
+run 10 us
+Stopped at time : 1382 ns : File "/home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/imports/Downloads/uart_top.v" Line 102
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+WARNING: [BD 41-1731] Type mismatch between connected pins: /iClk(clk) and /uart_top_0/iClk(undef)
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/sims0702/cdd_lab_2/cdd_lab_2.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/tools/Xilinx/Vivado/2020.1/data/xsim/xsim.ini' copied to run dir:'/home/sims0702/cdd_lab_2/cdd_lab_2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'uart_top_TB' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/sims0702/cdd_lab_2/cdd_lab_2.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj uart_top_TB_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/new/uart_receiver.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module uart_receiver
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/imports/Downloads/uart_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module uart_top
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/imports/Downloads/uart_tx.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module uart_tx
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sim_1/imports/Downloads/uart_top_TB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module uart_top_TB
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+launch_simulation: Time (s): cpu = 00:00:14 ; elapsed = 00:00:09 . Memory (MB): peak = 7404.145 ; gain = 0.000 ; free physical = 6049 ; free virtual = 13454
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+WARNING: [BD 41-1731] Type mismatch between connected pins: /iClk(clk) and /uart_top_0/iClk(undef)
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/sims0702/cdd_lab_2/cdd_lab_2.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/sims0702/cdd_lab_2/cdd_lab_2.sim/sim_1/behav/xsim'
+xelab -wto 557fc29781464754a719019d74ccaba4 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot uart_top_TB_behav xil_defaultlib.uart_top_TB xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2020.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2020.1/bin/unwrapped/lnx64.o/xelab -wto 557fc29781464754a719019d74ccaba4 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot uart_top_TB_behav xil_defaultlib.uart_top_TB xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.uart_tx(CLK_FREQ=100,BAUD_RATE=1...
+Compiling module xil_defaultlib.uart_receiver(CLK_FREQ=100,BAUD_...
+Compiling module xil_defaultlib.uart_top(NBYTES=2,CLK_FREQ=100,B...
+Compiling module xil_defaultlib.uart_top_TB
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot uart_top_TB_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2020.1
+Time resolution is 1 ps
+WARNING: [Simulator 45-24] Previous breakpoint at line 102 in file '/home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/imports/Downloads/uart_top.v' not restored because it is no longer a breakable line.
+Stopped at time : 458 ns : File "/home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/imports/Downloads/uart_top.v" Line 84
+relaunch_sim: Time (s): cpu = 00:00:18 ; elapsed = 00:00:14 . Memory (MB): peak = 7404.145 ; gain = 0.000 ; free physical = 6048 ; free virtual = 13453
+add_bp {/home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/imports/Downloads/uart_top.v} 90
+add_bp {/home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/imports/Downloads/uart_top.v} 91
+run all
+Stopped at time : 966 ns : File "/home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/imports/Downloads/uart_top.v" Line 90
+run all
+Stopped at time : 966 ns : File "/home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/imports/Downloads/uart_top.v" Line 91
+run all
+Stopped at time : 970 ns : File "/home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/imports/Downloads/uart_top.v" Line 104
+run all
+Stopped at time : 1382 ns : File "/home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/imports/Downloads/uart_top.v" Line 104
+add_bp {/home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/imports/Downloads/uart_top.v} 111
+run all
+Stopped at time : 1794 ns : File "/home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/imports/Downloads/uart_top.v" Line 111
+run all
+run: Time (s): cpu = 00:00:44 ; elapsed = 00:00:55 . Memory (MB): peak = 7404.145 ; gain = 0.000 ; free physical = 4962 ; free virtual = 13396
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+WARNING: [BD 41-1731] Type mismatch between connected pins: /iClk(clk) and /uart_top_0/iClk(undef)
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/sims0702/cdd_lab_2/cdd_lab_2.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/tools/Xilinx/Vivado/2020.1/data/xsim/xsim.ini' copied to run dir:'/home/sims0702/cdd_lab_2/cdd_lab_2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'uart_top_TB' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/sims0702/cdd_lab_2/cdd_lab_2.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj uart_top_TB_vlog.prj
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+WARNING: [BD 41-1731] Type mismatch between connected pins: /iClk(clk) and /uart_top_0/iClk(undef)
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/sims0702/cdd_lab_2/cdd_lab_2.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/sims0702/cdd_lab_2/cdd_lab_2.sim/sim_1/behav/xsim'
+xelab -wto 557fc29781464754a719019d74ccaba4 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot uart_top_TB_behav xil_defaultlib.uart_top_TB xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2020.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2020.1/bin/unwrapped/lnx64.o/xelab -wto 557fc29781464754a719019d74ccaba4 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot uart_top_TB_behav xil_defaultlib.uart_top_TB xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2020.1
+Time resolution is 1 ps
+Stopped at time : 458 ns : File "/home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/imports/Downloads/uart_top.v" Line 84
+relaunch_sim: Time (s): cpu = 00:00:57 ; elapsed = 00:00:06 . Memory (MB): peak = 7404.145 ; gain = 0.000 ; free physical = 6048 ; free virtual = 13452
+run all
+Stopped at time : 966 ns : File "/home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/imports/Downloads/uart_top.v" Line 90
+run all
+Stopped at time : 966 ns : File "/home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/imports/Downloads/uart_top.v" Line 91
+run all
+Stopped at time : 970 ns : File "/home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/imports/Downloads/uart_top.v" Line 104
+run all
+Stopped at time : 1382 ns : File "/home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/imports/Downloads/uart_top.v" Line 104
+run all
+Stopped at time : 1794 ns : File "/home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/imports/Downloads/uart_top.v" Line 111
+run all
+run: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 7404.145 ; gain = 0.000 ; free physical = 5952 ; free virtual = 13439
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+[Wed Apr 17 11:52:48 2024] Launched synth_1...
+Run output will be captured here: /home/sims0702/cdd_lab_2/cdd_lab_2.runs/synth_1/runme.log
+[Wed Apr 17 11:52:48 2024] Launched impl_1...
+Run output will be captured here: /home/sims0702/cdd_lab_2/cdd_lab_2.runs/impl_1/runme.log
+open_hw_manager
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2020.1
+  **** Build date : May 27 2020 at 20:33:44
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3417] Launching cs_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+
+****** Xilinx cs_server v2020.1.0
+  **** Build date : May 14 2020-03:10:29
+    ** Copyright 2017-2020 Xilinx, Inc. All Rights Reserved.
+
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/1234-tulA
+open_hw_target: Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 8173.316 ; gain = 769.172 ; free physical = 4503 ; free virtual = 12097
+set_property PROGRAM.FILE {/home/sims0702/cdd_lab_2/cdd_lab_2.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xc7z020_1]
+current_hw_device [get_hw_devices xc7z020_1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z020_1] 0]
+INFO: [Labtools 27-1434] Device xc7z020 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {/home/sims0702/cdd_lab_2/cdd_lab_2.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+INFO: [Labtools 27-1434] Device xc7z020 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+update_module_reference design_1_uart_top_0_0
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+Adding component instance block -- xilinx.com:module_ref:Debounce_Switch:1.0 - Debounce_Switch_0
+Adding component instance block -- xilinx.com:module_ref:uart_top:1.0 - uart_top_0
+WARNING: [BD 41-1731] Type mismatch between connected pins: /iClk(clk) and /uart_top_0/iClk(undef)
+Successfully read diagram <design_1> from BD file </home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/bd/design_1/design_1.bd>
+Upgrading '/home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/bd/design_1/design_1.bd'
+INFO: [IP_Flow 19-1972] Upgraded design_1_uart_top_0_0 from uart_top_v1_0 1.0 to uart_top_v1_0 1.0
+WARNING: [BD 41-1731] Type mismatch between connected pins: /iClk(clk) and /uart_top_0_upgraded_ipi/iClk(undef)
+Wrote  : </home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/bd/design_1/design_1.bd> 
+Wrote  : </home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+Wrote  : </home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/bd/design_1/design_1.bd> 
+VHDL Output written to : /home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/bd/design_1/synth/design_1.v
+VHDL Output written to : /home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : /home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block uart_top_0 .
+Exporting to file /home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file /home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File /home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+[Wed Apr 17 11:56:04 2024] Launched design_1_uart_top_0_0_synth_1, synth_1...
+Run output will be captured here:
+design_1_uart_top_0_0_synth_1: /home/sims0702/cdd_lab_2/cdd_lab_2.runs/design_1_uart_top_0_0_synth_1/runme.log
+synth_1: /home/sims0702/cdd_lab_2/cdd_lab_2.runs/synth_1/runme.log
+[Wed Apr 17 11:56:04 2024] Launched impl_1...
+Run output will be captured here: /home/sims0702/cdd_lab_2/cdd_lab_2.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 8342.664 ; gain = 21.008 ; free physical = 4625 ; free virtual = 12213
+set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {/home/sims0702/cdd_lab_2/cdd_lab_2.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+INFO: [Labtools 27-1434] Device xc7z020 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+close_hw_manager
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+WARNING: [Vivado 12-872] Run step 'Design Initialization' is out-of-date.
+[Wed Apr 17 12:03:28 2024] Launched impl_1...
+Run output will be captured here: /home/sims0702/cdd_lab_2/cdd_lab_2.runs/impl_1/runme.log
+update_module_reference design_1_uart_top_0_0
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+Upgrading '/home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/bd/design_1/design_1.bd'
+INFO: [IP_Flow 19-1972] Upgraded design_1_uart_top_0_0 from uart_top_v1_0 1.0 to uart_top_v1_0 1.0
+WARNING: [BD 41-1731] Type mismatch between connected pins: /iClk(clk) and /uart_top_0_upgraded_ipi/iClk(undef)
+Wrote  : </home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/bd/design_1/design_1.bd> 
+Wrote  : </home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+Wrote  : </home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/bd/design_1/design_1.bd> 
+VHDL Output written to : /home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/bd/design_1/synth/design_1.v
+VHDL Output written to : /home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : /home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block uart_top_0 .
+Exporting to file /home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file /home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File /home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+[Wed Apr 17 12:04:57 2024] Launched design_1_uart_top_0_0_synth_1, synth_1...
+Run output will be captured here:
+design_1_uart_top_0_0_synth_1: /home/sims0702/cdd_lab_2/cdd_lab_2.runs/design_1_uart_top_0_0_synth_1/runme.log
+synth_1: /home/sims0702/cdd_lab_2/cdd_lab_2.runs/synth_1/runme.log
+[Wed Apr 17 12:04:57 2024] Launched impl_1...
+Run output will be captured here: /home/sims0702/cdd_lab_2/cdd_lab_2.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak = 8377.684 ; gain = 21.008 ; free physical = 4655 ; free virtual = 12229
+open_hw_manager
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2020.1
+  **** Build date : May 27 2020 at 20:33:44
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3417] Launching cs_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+
+****** Xilinx cs_server v2020.1.0
+  **** Build date : May 14 2020-03:10:29
+    ** Copyright 2017-2020 Xilinx, Inc. All Rights Reserved.
+
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/1234-tulA
+set_property PROGRAM.FILE {/home/sims0702/cdd_lab_2/cdd_lab_2.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xc7z020_1]
+current_hw_device [get_hw_devices xc7z020_1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z020_1] 0]
+INFO: [Labtools 27-1434] Device xc7z020 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {/home/sims0702/cdd_lab_2/cdd_lab_2.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+INFO: [Labtools 27-1434] Device xc7z020 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+close_hw_manager
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/sims0702/cdd_lab_2/cdd_lab_2.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/tools/Xilinx/Vivado/2020.1/data/xsim/xsim.ini' copied to run dir:'/home/sims0702/cdd_lab_2/cdd_lab_2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'uart_top_TB' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/sims0702/cdd_lab_2/cdd_lab_2.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj uart_top_TB_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/new/uart_receiver.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module uart_receiver
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/imports/Downloads/uart_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module uart_top
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/imports/Downloads/uart_tx.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module uart_tx
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sim_1/imports/Downloads/uart_top_TB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module uart_top_TB
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/sims0702/cdd_lab_2/cdd_lab_2.sim/sim_1/behav/xsim'
+xelab -wto 557fc29781464754a719019d74ccaba4 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot uart_top_TB_behav xil_defaultlib.uart_top_TB xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2020.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2020.1/bin/unwrapped/lnx64.o/xelab -wto 557fc29781464754a719019d74ccaba4 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot uart_top_TB_behav xil_defaultlib.uart_top_TB xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.uart_tx(CLK_FREQ=100,BAUD_RATE=1...
+Compiling module xil_defaultlib.uart_receiver(CLK_FREQ=100,BAUD_...
+Compiling module xil_defaultlib.uart_top(NBYTES=2,CLK_FREQ=100,B...
+Compiling module xil_defaultlib.uart_top_TB
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot uart_top_TB_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/sims0702/cdd_lab_2/cdd_lab_2.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "uart_top_TB_behav -key {Behavioral:sim_1:Functional:uart_top_TB} -tclbatch {uart_top_TB.tcl} -protoinst "protoinst_files/design_1.protoinst" -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.1
+INFO: [Wavedata 42-565] Reading protoinst file protoinst_files/design_1.protoinst
+WARNING: [Wavedata 42-558] Couldn't load one or more protocol instances from protoinst file protoinst_files/design_1.protoinst for the following reason(s):
+There are no instances of module "design_1" in the design.
+
+Time resolution is 1 ps
+source uart_top_TB.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Stopped at time : 458 ns : File "/home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/imports/Downloads/uart_top.v" Line 84
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'uart_top_TB_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 8430.707 ; gain = 34.012 ; free physical = 4632 ; free virtual = 12190
+run all
+Stopped at time : 966 ns : File "/home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/imports/Downloads/uart_top.v" Line 90
+run all
+Stopped at time : 966 ns : File "/home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/imports/Downloads/uart_top.v" Line 91
+run all
+Stopped at time : 970 ns : File "/home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/imports/Downloads/uart_top.v" Line 104
+open_bd_design {/home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/bd/design_1/design_1.bd}
+update_module_reference design_1_uart_top_0_0
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+Upgrading '/home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/bd/design_1/design_1.bd'
+INFO: [IP_Flow 19-1972] Upgraded design_1_uart_top_0_0 from uart_top_v1_0 1.0 to uart_top_v1_0 1.0
+WARNING: [BD 41-1731] Type mismatch between connected pins: /iClk(clk) and /uart_top_0_upgraded_ipi/iClk(undef)
+Wrote  : </home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/bd/design_1/design_1.bd> 
+Wrote  : </home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+Wrote  : </home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/bd/design_1/design_1.bd> 
+VHDL Output written to : /home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/bd/design_1/synth/design_1.v
+VHDL Output written to : /home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : /home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block uart_top_0 .
+Exporting to file /home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file /home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File /home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+[Wed Apr 17 12:10:50 2024] Launched design_1_uart_top_0_0_synth_1, synth_1...
+Run output will be captured here:
+design_1_uart_top_0_0_synth_1: /home/sims0702/cdd_lab_2/cdd_lab_2.runs/design_1_uart_top_0_0_synth_1/runme.log
+synth_1: /home/sims0702/cdd_lab_2/cdd_lab_2.runs/synth_1/runme.log
+[Wed Apr 17 12:10:50 2024] Launched impl_1...
+Run output will be captured here: /home/sims0702/cdd_lab_2/cdd_lab_2.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak = 8459.723 ; gain = 29.016 ; free physical = 4658 ; free virtual = 12202
+open_hw_manager
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2020.1
+  **** Build date : May 27 2020 at 20:33:44
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3417] Launching cs_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+
+****** Xilinx cs_server v2020.1.0
+  **** Build date : May 14 2020-03:10:29
+    ** Copyright 2017-2020 Xilinx, Inc. All Rights Reserved.
+
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/1234-tulA
+set_property PROGRAM.FILE {/home/sims0702/cdd_lab_2/cdd_lab_2.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xc7z020_1]
+current_hw_device [get_hw_devices xc7z020_1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z020_1] 0]
+INFO: [Labtools 27-1434] Device xc7z020 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {/home/sims0702/cdd_lab_2/cdd_lab_2.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+INFO: [Labtools 27-1434] Device xc7z020 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+close_hw_manager
+close_bd_design [get_bd_designs design_1]
+Wrote  : </home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+WARNING: [BD 41-1731] Type mismatch between connected pins: /iClk(clk) and /uart_top_0/iClk(undef)
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/sims0702/cdd_lab_2/cdd_lab_2.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/tools/Xilinx/Vivado/2020.1/data/xsim/xsim.ini' copied to run dir:'/home/sims0702/cdd_lab_2/cdd_lab_2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'uart_top_TB' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/sims0702/cdd_lab_2/cdd_lab_2.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj uart_top_TB_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/new/uart_receiver.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module uart_receiver
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/imports/Downloads/uart_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module uart_top
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sources_1/imports/Downloads/uart_tx.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module uart_tx
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/sims0702/cdd_lab_2/cdd_lab_2.srcs/sim_1/imports/Downloads/uart_top_TB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module uart_top_TB
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+WARNING: [BD 41-1731] Type mismatch between connected pins: /iClk(clk) and /uart_top_0/iClk(undef)
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/sims0702/cdd_lab_2/cdd_lab_2.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/sims0702/cdd_lab_2/cdd_lab_2.sim/sim_1/behav/xsim'
+xelab -wto 557fc29781464754a719019d74ccaba4 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot uart_top_TB_behav xil_defaultlib.uart_top_TB xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2020.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2020.1/bin/unwrapped/lnx64.o/xelab -wto 557fc29781464754a719019d74ccaba4 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot uart_top_TB_behav xil_defaultlib.uart_top_TB xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.uart_tx(CLK_FREQ=100,BAUD_RATE=1...
+Compiling module xil_defaultlib.uart_receiver(CLK_FREQ=100,BAUD_...
+Compiling module xil_defaultlib.uart_top(NBYTES=2,CLK_FREQ=100,B...
+Compiling module xil_defaultlib.uart_top_TB
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot uart_top_TB_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2020.1
+INFO: [Wavedata 42-565] Reading protoinst file protoinst_files/design_1.protoinst
+WARNING: [Wavedata 42-558] Couldn't load one or more protocol instances from protoinst file protoinst_files/design_1.protoinst for the following reason(s):
+There are no instances of module "design_1" in the design.
+
+Time resolution is 1 ps
