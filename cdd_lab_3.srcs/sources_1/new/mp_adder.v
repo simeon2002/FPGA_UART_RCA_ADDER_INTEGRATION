@@ -205,7 +205,7 @@ module mp_adder #(
                   wFSM_next = s_DONE;
               end
                   
-            s_DONE:
+            s_DONE: // is it true that the last partial addition occurs here then????
               begin
                 muxA_sel = 1;
                 muxB_sel = 1;

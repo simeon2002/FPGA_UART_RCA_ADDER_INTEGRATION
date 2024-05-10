@@ -7,7 +7,7 @@ module mp_adder_TB();
   localparam OPERAND_WIDTH   = 128; 
   localparam ADDER_WIDTH     = 16; 
   
-  reg           rClk, rRst, rStart;
+  reg           rClk, rRst, rIStartAdder;
   reg [OPERAND_WIDTH-1:0]   rA, rB;
   
   wire [OPERAND_WIDTH:0]  wRes;
@@ -17,7 +17,7 @@ module mp_adder_TB();
   
   mp_adder #( .OPERAND_WIDTH(OPERAND_WIDTH), .ADDER_WIDTH(ADDER_WIDTH) )
   mp_adder_INST
-  ( .iClk(rClk), .iRst(rRst), .iStart(rStart), .iOpA(rA), .iOpB(rB), .oRes(wRes), .oDone(wDone) );
+  ( .iClk(rClk), .iRst(rRst), .iStart(rIStartAdder), .iOpA(rA), .iOpB(rB), .oRes(wRes), .oDone(wDone) );
 
   // definition of clock period
   localparam  T = 20;  
@@ -34,7 +34,7 @@ module mp_adder_TB();
   initial
     begin
       rRst = 1;
-      rStart = 0;
+      rIStartAdder = 0;
       rA = 0;
       rB = 0;
       
@@ -42,12 +42,12 @@ module mp_adder_TB();
       rRst = 0;
       #(5*T);
       
-      rStart = 1;
+      rIStartAdder = 1;
       rA <= 128'h12121212_34343434_56565656_78787878;
       rB <= 128'hefefefef_cdcdcdcd_abababab_90909090;
       #T;
       rExpectedResult = rA + rB;
-      rStart = 0;
+      rIStartAdder = 0;
             
       // wait until wDone is asserted     
       @(posedge wDone); // it will wait for done to be at posedge!
