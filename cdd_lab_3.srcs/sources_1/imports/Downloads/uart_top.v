@@ -160,12 +160,12 @@ module uart_top #(
         
         s_TX : // transmitting result (nbytes + 1) bytes
           begin
-            if ( (rCnt < NBYTES + 1) && (wTxBusy == 0) )
+           if ( (rCnt < NBYTES + 1) && (wTxBusy == 0) )
               begin
                 rFSM <= s_WAIT_TX;
                 rTxStart <= 1;
-                rTxByte <= rResult[(NBYTES+1)*8-1:(NBYTES+1)*8-8];            // highest byte first!
-                rResult <= {rResult[(NBYTES+1)*8-9:0] , 8'b0000_0000};    // we shift from right to left
+                rTxByte <= rResult[(NBYTES)*8:(NBYTES)*8-7];            // highest byte first!
+                rResult <= {rResult[(NBYTES)*8:7] , 8'b0000_0000};    // we shift from right to left
                 rCnt <= rCnt + 1;
               end
             else

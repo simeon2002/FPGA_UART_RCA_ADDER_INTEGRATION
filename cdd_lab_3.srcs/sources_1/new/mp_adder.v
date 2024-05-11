@@ -112,7 +112,7 @@ module mp_adder #(
 
     // Connect the inputs of adder to the outputs of A and B registers
     // and to the carry mux
-    assign operandA = regA_Q;
+    assign operandA = regA_Q; // always LSB.
     assign operandB = regB_Q;
     assign carry_in = muxCarryIn;
 
@@ -184,7 +184,7 @@ module mp_adder #(
               
             s_ADD_FIRST: //2nd cycle: add first AND set operand mux to option 1
               begin
-                muxA_sel = 1;
+                muxA_sel = 1; // already make mux select 1 for to get the next byte for nxt operation.
                 muxB_sel = 1;
                 muxCarry_sel = 0;
                 wCnt_next = rCnt_Current + 1;
@@ -231,14 +231,14 @@ module mp_adder #(
     // Describe done signal
     // It should be high at the same clock cycle when the output ready
 
-    reg regDone;
-    always @(posedge iClk)
-    begin
-      if(iRst)    regDone <= 1'd0; 
-      else        regDone <= ( rFSM_current == s_DONE ) ? 1'b1 : 1'b0;
-    end
+//    reg regDone;
+//    always @(posedge iClk)
+//    begin
+//      if(iRst)    regDone <= 1'd0; 
+//      else        regDone <= ( rFSM_current == s_DONE ) ? 1'b1 : 1'b0;
+//    end
 
-    assign oDone = regDone;
+    assign oDone = (rFSM_current == s_DONE) ? 1'b1 : 1'b0;
     
 
 endmodule

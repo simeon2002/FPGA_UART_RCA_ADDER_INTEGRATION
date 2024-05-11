@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.1 (lin64) Build 2902540 Wed May 27 19:54:35 MDT 2020
-| Date         : Tue May  7 19:07:17 2024
+| Date         : Sat May 11 15:07:34 2024
 | Host         : billionaire-he-will-be running 64-bit Ubuntu 23.10
 | Command      : report_control_sets -verbose -file uart_top_control_sets_placed.rpt
 | Design       : uart_top
@@ -27,7 +27,7 @@ Table of Contents
 |    Minimum number of control sets                        |     9 |
 |    Addition due to synthesis replication                 |     0 |
 |    Addition due to physical synthesis replication        |     0 |
-| Unused register locations in slices containing registers |     7 |
+| Unused register locations in slices containing registers |    21 |
 +----------------------------------------------------------+-------+
 * Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
 ** Run report_qor_suggestions for automated merging and remapping suggestions
@@ -60,28 +60,28 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | No           | No                    | No                     |               2 |            1 |
 | No           | No                    | Yes                    |               0 |            0 |
-| No           | Yes                   | No                     |            1624 |          406 |
+| No           | Yes                   | No                     |            1625 |          407 |
 | Yes          | No                    | No                     |               0 |            0 |
 | Yes          | No                    | Yes                    |               0 |            0 |
-| Yes          | Yes                   | No                     |            1575 |          314 |
+| Yes          | Yes                   | No                     |            1568 |          312 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
 4. Detailed Control Set Information
 -----------------------------------
 
-+-----------------+--------------------------------------------+------------------+------------------+----------------+--------------+
-|   Clock Signal  |                Enable Signal               | Set/Reset Signal | Slice Load Count | Bel Load Count | Bels / Slice |
-+-----------------+--------------------------------------------+------------------+------------------+----------------+--------------+
-|  iClk_IBUF_BUFG |                                            |                  |                1 |              2 |         2.00 |
-|  iClk_IBUF_BUFG | UART_RX_INST/rCnt_reg[6][0]                | iRst_IBUF        |                2 |              7 |         3.50 |
-|  iClk_IBUF_BUFG | UART_RX_INST/wBufferNext                   | iRst_IBUF        |                1 |              8 |         8.00 |
-|  iClk_IBUF_BUFG | UART_TX_INST/wTxData_Next                  | iRst_IBUF        |                3 |              8 |         2.67 |
-|  iClk_IBUF_BUFG | rTxByte                                    | iRst_IBUF        |                2 |              8 |         4.00 |
-|  iClk_IBUF_BUFG | UART_RX_INST/E[0]                          | iRst_IBUF        |               80 |            512 |         6.40 |
-|  iClk_IBUF_BUFG | UART_RX_INST/FSM_sequential_rFSM_reg[1][0] | iRst_IBUF        |               90 |            512 |         5.69 |
-|  iClk_IBUF_BUFG | UART_TX_INST/E[0]                          | iRst_IBUF        |              136 |            520 |         3.82 |
-|  iClk_IBUF_BUFG |                                            | iRst_IBUF        |              406 |           1624 |         4.00 |
-+-----------------+--------------------------------------------+------------------+------------------+----------------+--------------+
++-----------------+-----------------------------------------------------+------------------+------------------+----------------+--------------+
+|   Clock Signal  |                    Enable Signal                    | Set/Reset Signal | Slice Load Count | Bel Load Count | Bels / Slice |
++-----------------+-----------------------------------------------------+------------------+------------------+----------------+--------------+
+|  iClk_IBUF_BUFG |                                                     |                  |                1 |              2 |         2.00 |
+|  iClk_IBUF_BUFG | UART_RX_INST/E[0]                                   | iRst_IBUF        |                3 |              7 |         2.33 |
+|  iClk_IBUF_BUFG | UART_RX_INST/wBufferNext                            | iRst_IBUF        |                1 |              8 |         8.00 |
+|  iClk_IBUF_BUFG | rTxByte                                             | iRst_IBUF        |                2 |              8 |         4.00 |
+|  iClk_IBUF_BUFG | UART_TX_INST/wTxData_Next                           | iRst_IBUF        |                2 |              8 |         4.00 |
+|  iClk_IBUF_BUFG | UART_RX_INST/FSM_sequential_rFSM_reg[0]_rep__2[0]   | iRst_IBUF        |               82 |            512 |         6.24 |
+|  iClk_IBUF_BUFG | UART_RX_INST/FSM_sequential_rFSM_reg[0]_rep__2_0[0] | iRst_IBUF        |               85 |            512 |         6.02 |
+|  iClk_IBUF_BUFG | MP_ADDER_INST/E[0]                                  | iRst_IBUF        |              137 |            513 |         3.74 |
+|  iClk_IBUF_BUFG |                                                     | iRst_IBUF        |              407 |           1625 |         3.99 |
++-----------------+-----------------------------------------------------+------------------+------------------+----------------+--------------+
 
 

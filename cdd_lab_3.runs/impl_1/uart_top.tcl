@@ -114,6 +114,8 @@ proc step_failed { step } {
   close $ch
 }
 
+set_msg_config -id {Common 17-41} -limit 10000000
+set_msg_config -id {HDL-1065} -limit 10000
 set_msg_config  -id {VRFC 10-3321}  -string {{ERROR: [VRFC 10-3321] external reference 'ADDER_WIDTH' remains unresolved [/home/sims0702/lab_1/lab_1.srcs/sim_1/new/ripple_carry_adder_Nb_TB.v:11]}}  -suppress 
 
 OPTRACE "Implementation" START { ROLLUP_1 }
@@ -124,6 +126,7 @@ set ACTIVE_STEP write_bitstream
 set rc [catch {
   create_msg_db write_bitstream.pb
   set_param chipscope.maxJobs 4
+  set_param xicom.use_bs_reader 1
   open_checkpoint uart_top_routed.dcp
   set_property webtalk.parent_dir /home/sims0702/Documents/University/phase-3-courses/complex-digital-design/cdd_lab_3/cdd_lab_3.cache/wt [current_project]
 set_property TOP uart_top [current_fileset]
