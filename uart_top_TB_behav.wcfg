@@ -11,15 +11,19 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="19897167fs"></ZoomStartTime>
-      <ZoomEndTime time="20718168fs"></ZoomEndTime>
-      <Cursor1Time time="20692667fs"></Cursor1Time>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="8515001fs"></ZoomEndTime>
+      <Cursor1Time time="434000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="258"></NameColumnWidth>
-      <ValueColumnWidth column_width="562"></ValueColumnWidth>
+      <ValueColumnWidth column_width="499"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="18" />
+   <WVObjectSize size="9" />
+   <wave_markers>
+      <marker label="" time="13118000" />
+      <marker label="" time="13478000" />
+   </wave_markers>
    <wvobject type="logic" fp_name="/uart_top_TB/rRst">
       <obj_property name="ElementShortName">rRst</obj_property>
       <obj_property name="ObjectShortName">rRst</obj_property>
@@ -28,9 +32,105 @@
       <obj_property name="ElementShortName">rClk</obj_property>
       <obj_property name="ObjectShortName">rClk</obj_property>
    </wvobject>
+   <wvobject type="group" fp_name="group88">
+      <obj_property name="label">uart tx signals top</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="array" fp_name="/uart_top_TB/uart_top_inst/UART_TX_INST/iTxByte">
+         <obj_property name="ElementShortName">iTxByte[7:0]</obj_property>
+         <obj_property name="ObjectShortName">iTxByte[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/uart_top_TB/uart_top_inst/UART_TX_INST/oTxBusy">
+         <obj_property name="ElementShortName">oTxBusy</obj_property>
+         <obj_property name="ObjectShortName">oTxBusy</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/uart_top_TB/uart_top_inst/UART_TX_INST/oTxDone">
+         <obj_property name="ElementShortName">oTxDone</obj_property>
+         <obj_property name="ObjectShortName">oTxDone</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/uart_top_TB/uart_top_inst/UART_TX_INST/rFSM_Current">
+         <obj_property name="ElementShortName">rFSM_Current[2:0]</obj_property>
+         <obj_property name="ObjectShortName">rFSM_Current[2:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/uart_top_TB/uart_top_inst/UART_TX_INST/wFSM_Next">
+         <obj_property name="ElementShortName">wFSM_Next[2:0]</obj_property>
+         <obj_property name="ObjectShortName">wFSM_Next[2:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/uart_top_TB/uart_top_inst/UART_TX_INST/rCnt_Current">
+         <obj_property name="ElementShortName">rCnt_Current[4:0]</obj_property>
+         <obj_property name="ObjectShortName">rCnt_Current[4:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/uart_top_TB/uart_top_inst/UART_TX_INST/wCnt_Next">
+         <obj_property name="ElementShortName">wCnt_Next[4:0]</obj_property>
+         <obj_property name="ObjectShortName">wCnt_Next[4:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/uart_top_TB/uart_top_inst/UART_TX_INST/rBit_Current">
+         <obj_property name="ElementShortName">rBit_Current[2:0]</obj_property>
+         <obj_property name="ObjectShortName">rBit_Current[2:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/uart_top_TB/uart_top_inst/UART_TX_INST/wBit_Next">
+         <obj_property name="ElementShortName">wBit_Next[2:0]</obj_property>
+         <obj_property name="ObjectShortName">wBit_Next[2:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/uart_top_TB/uart_top_inst/UART_TX_INST/rTxData_Current">
+         <obj_property name="ElementShortName">rTxData_Current[7:0]</obj_property>
+         <obj_property name="ObjectShortName">rTxData_Current[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/uart_top_TB/uart_top_inst/UART_TX_INST/wTxData_Next">
+         <obj_property name="ElementShortName">wTxData_Next[7:0]</obj_property>
+         <obj_property name="ObjectShortName">wTxData_Next[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/uart_top_TB/uart_top_inst/UART_TX_INST/rTestingStorage">
+         <obj_property name="ElementShortName">rTestingStorage[135:0]</obj_property>
+         <obj_property name="ObjectShortName">rTestingStorage[135:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="divider48" type="divider">
+   </wvobject>
+   <wvobject type="group" fp_name="group35">
+      <obj_property name="label">uart top signals</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject type="array" fp_name="/uart_top_TB/uart_top_inst/rFSM">
+         <obj_property name="ElementShortName">rFSM[2:0]</obj_property>
+         <obj_property name="ObjectShortName">rFSM[2:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/uart_top_TB/uart_top_inst/rTxStart">
+         <obj_property name="ElementShortName">rTxStart</obj_property>
+         <obj_property name="ObjectShortName">rTxStart</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/uart_top_TB/uart_top_inst/wTxBusy">
+         <obj_property name="ElementShortName">wTxBusy</obj_property>
+         <obj_property name="ObjectShortName">wTxBusy</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/uart_top_TB/uart_top_inst/wTxDone">
+         <obj_property name="ElementShortName">wTxDone</obj_property>
+         <obj_property name="ObjectShortName">wTxDone</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/uart_top_TB/uart_top_inst/rTxByte">
+         <obj_property name="ElementShortName">rTxByte[7:0]</obj_property>
+         <obj_property name="ObjectShortName">rTxByte[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/uart_top_TB/uart_top_inst/rCnt">
+         <obj_property name="ElementShortName">rCnt[4:0]</obj_property>
+         <obj_property name="ObjectShortName">rCnt[4:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/uart_top_TB/uart_top_inst/rResult">
+         <obj_property name="ElementShortName">rResult[135:0]</obj_property>
+         <obj_property name="ObjectShortName">rResult[135:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/uart_top_TB/uart_top_inst/wResult">
+         <obj_property name="ElementShortName">wResult[135:0]</obj_property>
+         <obj_property name="ObjectShortName">wResult[135:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="divider47" type="divider">
+   </wvobject>
    <wvobject type="group" fp_name="group34">
       <obj_property name="label">tb signals</obj_property>
       <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
       <wvobject type="logic" fp_name="/uart_top_TB/wTx">
          <obj_property name="ElementShortName">wTx</obj_property>
          <obj_property name="ObjectShortName">wTx</obj_property>
@@ -68,47 +168,7 @@
          <obj_property name="ObjectShortName">i[31:0]</obj_property>
       </wvobject>
    </wvobject>
-   <wvobject type="group" fp_name="group88">
-      <obj_property name="label">uart tx signals top</obj_property>
-      <obj_property name="DisplayName">label</obj_property>
-   </wvobject>
-   <wvobject type="group" fp_name="group35">
-      <obj_property name="label">uart top signals</obj_property>
-      <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="isExpanded"></obj_property>
-      <wvobject type="array" fp_name="/uart_top_TB/uart_top_inst/rFSM">
-         <obj_property name="ElementShortName">rFSM[2:0]</obj_property>
-         <obj_property name="ObjectShortName">rFSM[2:0]</obj_property>
-      </wvobject>
-      <wvobject type="logic" fp_name="/uart_top_TB/uart_top_inst/rTxStart">
-         <obj_property name="ElementShortName">rTxStart</obj_property>
-         <obj_property name="ObjectShortName">rTxStart</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/uart_top_TB/uart_top_inst/rTxByte">
-         <obj_property name="ElementShortName">rTxByte[7:0]</obj_property>
-         <obj_property name="ObjectShortName">rTxByte[7:0]</obj_property>
-      </wvobject>
-      <wvobject type="logic" fp_name="/uart_top_TB/uart_top_inst/wTxBusy">
-         <obj_property name="ElementShortName">wTxBusy</obj_property>
-         <obj_property name="ObjectShortName">wTxBusy</obj_property>
-      </wvobject>
-      <wvobject type="logic" fp_name="/uart_top_TB/uart_top_inst/wTxDone">
-         <obj_property name="ElementShortName">wTxDone</obj_property>
-         <obj_property name="ObjectShortName">wTxDone</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/uart_top_TB/uart_top_inst/rResult">
-         <obj_property name="ElementShortName">rResult[135:0]</obj_property>
-         <obj_property name="ObjectShortName">rResult[135:0]</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/uart_top_TB/uart_top_inst/wResult">
-         <obj_property name="ElementShortName">wResult[135:0]</obj_property>
-         <obj_property name="ObjectShortName">wResult[135:0]</obj_property>
-         <obj_property name="Radix">HEXRADIX</obj_property>
-      </wvobject>
-      <wvobject type="logic" fp_name="/uart_top_TB/uart_top_inst/wAdderDone">
-         <obj_property name="ElementShortName">wAdderDone</obj_property>
-         <obj_property name="ObjectShortName">wAdderDone</obj_property>
-      </wvobject>
+   <wvobject fp_name="divider49" type="divider">
    </wvobject>
    <wvobject type="group" fp_name="group77">
       <obj_property name="label">uart tx signals tb</obj_property>
@@ -149,54 +209,5 @@
          <obj_property name="ElementShortName">wTxData_Next[7:0]</obj_property>
          <obj_property name="ObjectShortName">wTxData_Next[7:0]</obj_property>
       </wvobject>
-   </wvobject>
-   <wvobject type="array" fp_name="/uart_top_TB/uart_top_inst/UART_TX_INST/iTxByte">
-      <obj_property name="ElementShortName">iTxByte[7:0]</obj_property>
-      <obj_property name="ObjectShortName">iTxByte[7:0]</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/uart_top_TB/uart_top_inst/UART_TX_INST/oTxBusy">
-      <obj_property name="ElementShortName">oTxBusy</obj_property>
-      <obj_property name="ObjectShortName">oTxBusy</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/uart_top_TB/uart_top_inst/UART_TX_INST/oTxDone">
-      <obj_property name="ElementShortName">oTxDone</obj_property>
-      <obj_property name="ObjectShortName">oTxDone</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/uart_top_TB/uart_top_inst/UART_TX_INST/rFSM_Current">
-      <obj_property name="ElementShortName">rFSM_Current[2:0]</obj_property>
-      <obj_property name="ObjectShortName">rFSM_Current[2:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/uart_top_TB/uart_top_inst/UART_TX_INST/wFSM_Next">
-      <obj_property name="ElementShortName">wFSM_Next[2:0]</obj_property>
-      <obj_property name="ObjectShortName">wFSM_Next[2:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/uart_top_TB/uart_top_inst/UART_TX_INST/rCnt_Current">
-      <obj_property name="ElementShortName">rCnt_Current[4:0]</obj_property>
-      <obj_property name="ObjectShortName">rCnt_Current[4:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/uart_top_TB/uart_top_inst/UART_TX_INST/wCnt_Next">
-      <obj_property name="ElementShortName">wCnt_Next[4:0]</obj_property>
-      <obj_property name="ObjectShortName">wCnt_Next[4:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/uart_top_TB/uart_top_inst/UART_TX_INST/rBit_Current">
-      <obj_property name="ElementShortName">rBit_Current[2:0]</obj_property>
-      <obj_property name="ObjectShortName">rBit_Current[2:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/uart_top_TB/uart_top_inst/UART_TX_INST/wBit_Next">
-      <obj_property name="ElementShortName">wBit_Next[2:0]</obj_property>
-      <obj_property name="ObjectShortName">wBit_Next[2:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/uart_top_TB/uart_top_inst/UART_TX_INST/rTxData_Current">
-      <obj_property name="ElementShortName">rTxData_Current[7:0]</obj_property>
-      <obj_property name="ObjectShortName">rTxData_Current[7:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/uart_top_TB/uart_top_inst/UART_TX_INST/wTxData_Next">
-      <obj_property name="ElementShortName">wTxData_Next[7:0]</obj_property>
-      <obj_property name="ObjectShortName">wTxData_Next[7:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/uart_top_TB/uart_top_inst/rCnt">
-      <obj_property name="ElementShortName">rCnt[4:0]</obj_property>
-      <obj_property name="ObjectShortName">rCnt[4:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
 </wave_config>

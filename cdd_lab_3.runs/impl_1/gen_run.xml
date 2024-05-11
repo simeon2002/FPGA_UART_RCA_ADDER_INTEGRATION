@@ -186,6 +186,6 @@
     <Step Id="write_bitstream"/>
     <Step Id="write_device_image"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_uart_top_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_Debounce_Switch_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_uart_top_0_0"/>
 </GenRun>

@@ -4,3 +4,5 @@ Breakpoint File Version 1.0
 163 true /home/sims0702/Documents/University/phase-3-courses/complex-digital-design/cdd_lab_3/cdd_lab_3.srcs/sources_1/imports/Downloads/uart_top.v
 169 true /home/sims0702/Documents/University/phase-3-courses/complex-digital-design/cdd_lab_3/cdd_lab_3.srcs/sources_1/imports/Downloads/uart_top.v
 173 true /home/sims0702/Documents/University/phase-3-courses/complex-digital-design/cdd_lab_3/cdd_lab_3.srcs/sources_1/imports/Downloads/uart_top.v
+145 true /home/sims0702/Documents/University/phase-3-courses/complex-digital-design/cdd_lab_3/cdd_lab_3.srcs/sources_1/imports/Downloads/uart_top.v
+168 true /home/sims0702/Documents/University/phase-3-courses/complex-digital-design/cdd_lab_3/cdd_lab_3.srcs/sources_1/imports/Downloads/uart_top.v

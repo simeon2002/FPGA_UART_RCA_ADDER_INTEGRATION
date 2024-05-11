@@ -2,12 +2,11 @@
 # Webtalk v2020.1 (64-bit)
 # SW Build 2902540 on Wed May 27 19:54:35 MDT 2020
 # IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
-# Start of session at: Tue May  7 15:24:26 2024
-# Process ID: 106259
+# Start of session at: Sat May 11 01:07:10 2024
+# Process ID: 373320
 # Current directory: /home/sims0702/Documents/University/phase-3-courses/complex-digital-design/cdd_lab_3/cdd_lab_3.sim/sim_1/behav/xsim
-# Command line: wbtcv -mode batch -source /home/sims0702/Documents/University/phase-3-courses/complex-digital-design/cdd_lab_3/cdd_lab_3.sim/sim_1/behav/xsim/xsim.dir/mp_adder_TB_behav/webtalk/xsim_webtalk.tcl -notrace
+# Command line: wbtcv -mode batch -source /home/sims0702/Documents/University/phase-3-courses/complex-digital-design/cdd_lab_3/cdd_lab_3.sim/sim_1/behav/xsim/xsim.dir/uart_top_TB_behav/webtalk/xsim_webtalk.tcl -notrace
 # Log file: /home/sims0702/Documents/University/phase-3-courses/complex-digital-design/cdd_lab_3/cdd_lab_3.sim/sim_1/behav/xsim/webtalk.log
 # Journal file: /home/sims0702/Documents/University/phase-3-courses/complex-digital-design/cdd_lab_3/cdd_lab_3.sim/sim_1/behav/xsim/webtalk.jou
 #-----------------------------------------------------------
-source /home/sims0702/Documents/University/phase-3-courses/complex-digital-design/cdd_lab_3/cdd_lab_3.sim/sim_1/behav/xsim/xsim.dir/mp_adder_TB_behav/webtalk/xsim_webtalk.tcl -notrace
-INFO: [Common 17-206] Exiting Webtalk at Tue May  7 15:24:26 2024...
+source /home/sims0702/Documents/University/phase-3-courses/complex-digital-design/cdd_lab_3/cdd_lab_3.sim/sim_1/behav/xsim/xsim.dir/uart_top_TB_behav/webtalk/xsim_webtalk.tcl -notrace

@@ -1,0 +1,10 @@
+#
+# An unexpected error has occurred (11)
+#
+Stack:
+/tools/Xilinx/Vivado/2020.1/tps/lnx64/jre9.0.4/lib//server/libjvm.so(+0xb6aadb) [0x7f77dd96aadb]
+/tools/Xilinx/Vivado/2020.1/tps/lnx64/jre9.0.4/lib//server/libjvm.so(JVM_handle_linux_signal+0xbb) [0x7f77dd96fe1b]
+/tools/Xilinx/Vivado/2020.1/tps/lnx64/jre9.0.4/lib//server/libjvm.so(+0xb647b8) [0x7f77dd9647b8]
+/lib/x86_64-linux-gnu/libc.so.6(+0x42990) [0x7f7836042990]
+/tools/Xilinx/Vivado/2020.1/lib/lnx64.o/librdi_filemgmt.so(Java_ui_data_design_dai_SrcFile_1getFullPath+0x17) [0x7f7804fa27c7]
+[0x7f77cdd2e111]

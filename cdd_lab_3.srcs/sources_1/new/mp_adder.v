@@ -13,10 +13,12 @@ module mp_adder #(
     input  wire                       iClk,
     input  wire                       iRst,
     input  wire                       iStart,
+    input  wire                       iBtn,
     input  wire [OPERAND_WIDTH-1:0]   iOpA,
     input  wire [OPERAND_WIDTH-1:0]   iOpB,
-    output wire [OPERAND_WIDTH + 7:0]     oRes,  
-    output wire                       oDone);
+    output wire [OPERAND_WIDTH:0]     oRes,  
+    output wire                       oDone
+    );
 
     // Describe an OPERAND_WIDTH-bit register for A
     wire [OPERAND_WIDTH-1:0] regA_D; // next value
@@ -50,6 +52,11 @@ module mp_adder #(
     // connect the output of the multiplexer to the input of register A
     assign regA_D = muxA_Out;
 
+    // 2-input multiplexer for additiona and substraction conditioning of B
+    reg muxModeSel;
+    wire [OPERAND_WIDTH-1:0] wiOpB;
+    assign wiOpB = (muxModeSel == 0) ? iOpB : ~iOpB + 1;
+    
     // Describe a 2-input Multiplexer for register B
     // It should select either of these two:
     //   - the input iOpB
@@ -57,7 +64,7 @@ module mp_adder #(
     reg          muxB_sel;
     wire  [OPERAND_WIDTH-1:0] muxB_Out;
     
-    assign muxB_Out = (muxB_sel == 0) ? iOpB : { {ADDER_WIDTH{1'b0}}  , regB_Q[OPERAND_WIDTH-1:ADDER_WIDTH]};
+    assign muxB_Out = (muxB_sel == 0) ? wiOpB : { {ADDER_WIDTH{1'b0}}  , regB_Q[OPERAND_WIDTH-1:ADDER_WIDTH]};
     
     // connect the output of the multiplexer to the input of register B
     assign regB_D = muxB_Out;
@@ -165,7 +172,10 @@ module mp_adder #(
                 muxB_sel = 0;
                 muxCarry_sel = 0;
                 wCnt_next = 0;
-                
+                if (iBtn)
+                    muxModeSel = 0;
+                else 
+                    muxModeSel = 1;
                 if (iStart==1)
                     wFSM_next = s_STORE_OPS; // 1st cycle
                 else
@@ -178,6 +188,10 @@ module mp_adder #(
                 muxB_sel = 0;
                 muxCarry_sel = 0;
                 wCnt_next = rCnt_Current + 1;
+                if (iBtn)
+                    muxModeSel = 0;
+                else 
+                    muxModeSel = 1;
                 
                 wFSM_next = s_ADD_FIRST;
               end
@@ -197,6 +211,7 @@ module mp_adder #(
                 muxA_sel = 1;
                 muxB_sel = 1;
                 muxCarry_sel = 1;
+                muxModeSel = 0; // doesn't matter here.
                 wCnt_next = rCnt_Current + 1;
                 
                 if ( rCnt_Current < (N_ITERATIONS - 1) )
@@ -210,6 +225,7 @@ module mp_adder #(
                 muxA_sel = 1;
                 muxB_sel = 1;
                 muxCarry_sel = 1;
+                muxModeSel = 0; // doesn't matter here.
                 wCnt_next = 0;
                 
                 wFSM_next = s_IDLE;
@@ -221,6 +237,7 @@ module mp_adder #(
                 muxB_sel = 0;
                 muxCarry_sel = 0;
                 wCnt_next = 0;
+                muxModeSel = 0; // doesn't matter here.
                 
                 wFSM_next = s_IDLE;
               end
