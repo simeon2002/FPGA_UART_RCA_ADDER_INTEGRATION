@@ -15,7 +15,7 @@ module uart_top #(
   );
 
   // Buffer to exchange data between Pynq-Z2 and laptop
-  reg [NBYTES*8-1:0] rBuffer;
+  //reg [NBYTES*8-1:0] rBuffer;
 
   // State definition
   localparam s_IDLE         = 3'b000;
@@ -40,8 +40,8 @@ module uart_top #(
   reg [$clog2(NBYTES):0] rCnt; // count the number of bytes sent and received
   // registers for storing ops and result.
   reg [NBYTES*8 - 1: 0] rA, rB;
-  reg [(NBYTES + 1)*8 - 1 : 0] rResult;
-  wire [(NBYTES+1)*8 - 1: 0] wResult; // output of adder that will be stored in rResult when addition is done.
+  reg [NBYTES*8 : 0] rResult;
+  wire [NBYTES*8: 0] wResult; // output of adder that will be stored in rResult when addition is done.
   reg rStartAdder;
   wire wAdderDone;
 
@@ -123,7 +123,7 @@ module uart_top #(
       s_OP_B_RX :
         begin
             if (wRxDone == 1 && rCnt < NBYTES - 1) begin // RECEIVING BYTES
-                rB <= {rB[NBYTES * 8 - 9:0], wRxByte}; // shifting byte
+                 rB <= {rB[NBYTES * 8 - 9:0], wRxByte}; // shifting byte
                 rCnt <= rCnt + 1;
                 rFSM <= s_OP_B_RX;
             end
@@ -144,10 +144,17 @@ module uart_top #(
                 rFSM <= s_TX;
                 rResult <= wResult;
                 rStartAdder <= 0;
+                rCnt <= 0;
             end     
             else begin
-                rStartAdder <= 1;
-                rFSM <= s_ADD_OPS;
+                if (wAdderDone == 0 && rCnt == 0) begin 
+                    rStartAdder <= 1;
+                    rCnt <= rCnt + 1;
+                end
+                else begin
+                    rFSM <= s_ADD_OPS;
+                    rStartAdder <= 0;
+                end
             end
           end
         

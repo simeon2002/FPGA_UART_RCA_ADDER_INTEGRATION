@@ -182,7 +182,7 @@ module mp_adder #(
                 wFSM_next = s_ADD_FIRST;
               end
               
-            s_ADD_FIRST: //2nd cycle
+            s_ADD_FIRST: //2nd cycle: add first AND set operand mux to option 1
               begin
                 muxA_sel = 1;
                 muxB_sel = 1;

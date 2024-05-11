@@ -1,1 +1,12 @@
 Breakpoint File Version 1.0
+102 true /home/sims0702/Documents/University/phase-3-courses/complex-digital-design/cdd_lab_3/cdd_lab_3.srcs/sources_1/imports/Downloads/uart_top.v
+155 true /home/sims0702/Documents/University/phase-3-courses/complex-digital-design/cdd_lab_3/cdd_lab_3.srcs/sources_1/imports/Downloads/uart_top.v
+187 true /home/sims0702/Documents/University/phase-3-courses/complex-digital-design/cdd_lab_3/cdd_lab_3.srcs/sources_1/new/mp_adder.v
+198 true /home/sims0702/Documents/University/phase-3-courses/complex-digital-design/cdd_lab_3/cdd_lab_3.srcs/sources_1/new/mp_adder.v
+74 true /home/sims0702/Documents/University/phase-3-courses/complex-digital-design/cdd_lab_3/cdd_lab_3.srcs/sim_1/imports/Downloads/uart_top_TB.v
+56 true /home/sims0702/Documents/University/phase-3-courses/complex-digital-design/cdd_lab_3/cdd_lab_3.srcs/sim_1/imports/Downloads/uart_top_TB.v
+134 true /home/sims0702/Documents/University/phase-3-courses/complex-digital-design/cdd_lab_3/cdd_lab_3.srcs/sources_1/imports/Downloads/uart_top.v
+150 true /home/sims0702/Documents/University/phase-3-courses/complex-digital-design/cdd_lab_3/cdd_lab_3.srcs/sources_1/imports/Downloads/uart_top.v
+145 true /home/sims0702/Documents/University/phase-3-courses/complex-digital-design/cdd_lab_3/cdd_lab_3.srcs/sources_1/imports/Downloads/uart_top.v
+205 true /home/sims0702/Documents/University/phase-3-courses/complex-digital-design/cdd_lab_3/cdd_lab_3.srcs/sources_1/new/mp_adder.v
+210 true /home/sims0702/Documents/University/phase-3-courses/complex-digital-design/cdd_lab_3/cdd_lab_3.srcs/sources_1/new/mp_adder.v
