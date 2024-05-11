@@ -15,7 +15,7 @@ module mp_adder #(
     input  wire                       iStart,
     input  wire [OPERAND_WIDTH-1:0]   iOpA,
     input  wire [OPERAND_WIDTH-1:0]   iOpB,
-    output wire [OPERAND_WIDTH:0]     oRes,  
+    output wire [OPERAND_WIDTH + 7:0]     oRes,  
     output wire                       oDone);
 
     // Describe an OPERAND_WIDTH-bit register for A
@@ -117,7 +117,7 @@ module mp_adder #(
     assign carry_in = muxCarryIn;
 
     // Describe the output signal oRes: it is the concatenation of output registers
-    assign oRes = { regCout, regResult};
+    assign oRes = {regCout, regResult};
 
     // note: conclusion about datapath is that it is very easy. It is a literal translation of the circuit that is created in the design phase. 
     // the muxes are just if statement as seen, then the connections are just assigned as wires and in-between registers are used for storing 

@@ -39,6 +39,11 @@ module uart_tx #(
 
   // -> the byte we want to send (we store an internal copy)
   reg [7:0] rTxData_Current, wTxData_Next;
+  reg [135:0] rTestingStorage;
+
+    always @(posedge oTxDone) begin
+        rTestingStorage <= {rTestingStorage[135:8], iTxByte};
+    end
 
 
   // Describe all previous registers

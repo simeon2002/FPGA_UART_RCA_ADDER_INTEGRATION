@@ -40,8 +40,8 @@ module uart_top #(
   reg [$clog2(NBYTES):0] rCnt; // count the number of bytes sent and received
   // registers for storing ops and result.
   reg [NBYTES*8 - 1: 0] rA, rB;
-  reg [NBYTES*8 : 0] rResult;
-  wire [NBYTES*8: 0] wResult; // output of adder that will be stored in rResult when addition is done.
+  reg [(NBYTES + 1)*8 - 1: 0] rResult;
+  wire [(NBYTES + 1)*8 - 1: 0] wResult; // output of adder that will be stored in rResult when addition is done.
   reg rStartAdder;
   wire wAdderDone;
 
@@ -142,7 +142,7 @@ module uart_top #(
           begin
             if (wAdderDone) begin // adder done
                 rFSM <= s_TX;
-                rResult <= wResult;
+                rResult <= {7'b0, wResult};
                 rStartAdder <= 0;
                 rCnt <= 0;
             end     
@@ -160,12 +160,12 @@ module uart_top #(
         
         s_TX : // transmitting result (nbytes + 1) bytes
           begin
-           if ( (rCnt < NBYTES + 1) && (wTxBusy == 0) )
+           if ( (rCnt <= NBYTES) && (wTxBusy == 0) )
               begin
                 rFSM <= s_WAIT_TX;
                 rTxStart <= 1;
-                rTxByte <= rResult[(NBYTES)*8:(NBYTES)*8-7];            // highest byte first!
-                rResult <= {rResult[(NBYTES)*8:7] , 8'b0000_0000};    // we shift from right to left
+                rTxByte <= rResult[(NBYTES + 1)*8 - 1:(NBYTES)*8];            // highest byte first!
+                rResult <= {rResult[(NBYTES + 1)*8 - 1:0] , 8'b0000_0000};    // we shift from right to left
                 rCnt <= rCnt + 1;
               end
             else
