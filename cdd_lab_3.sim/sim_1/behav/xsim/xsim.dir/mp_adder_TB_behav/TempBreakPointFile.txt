@@ -1,8 +1,1 @@
 Breakpoint File Version 1.0
-66 true /home/sims0702/Documents/University/phase-3-courses/complex-digital-design/cdd_lab_3/cdd_lab_3.srcs/sim_1/new/mp_adder_TB.v
-70 true /home/sims0702/Documents/University/phase-3-courses/complex-digital-design/cdd_lab_3/cdd_lab_3.srcs/sim_1/new/mp_adder_TB.v
-171 true /home/sims0702/Documents/University/phase-3-courses/complex-digital-design/cdd_lab_3/cdd_lab_3.srcs/sources_1/new/mp_adder.v
-187 true /home/sims0702/Documents/University/phase-3-courses/complex-digital-design/cdd_lab_3/cdd_lab_3.srcs/sources_1/new/mp_adder.v
-201 true /home/sims0702/Documents/University/phase-3-courses/complex-digital-design/cdd_lab_3/cdd_lab_3.srcs/sources_1/new/mp_adder.v
-211 true /home/sims0702/Documents/University/phase-3-courses/complex-digital-design/cdd_lab_3/cdd_lab_3.srcs/sources_1/new/mp_adder.v
-225 true /home/sims0702/Documents/University/phase-3-courses/complex-digital-design/cdd_lab_3/cdd_lab_3.srcs/sources_1/new/mp_adder.v

@@ -201,6 +201,7 @@ module mp_adder #(
                 muxA_sel = 1; // already make mux select 1 for to get the next byte for nxt operation.
                 muxB_sel = 1;
                 muxCarry_sel = 0;
+                muxModeSel = 0;
                 wCnt_next = rCnt_Current + 1;
                 
                 wFSM_next = s_ADD_WORDS;

@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.1 (lin64) Build 2902540 Wed May 27 19:54:35 MDT 2020
-| Date         : Sat May 11 17:40:53 2024
+| Date         : Sun May 12 11:11:15 2024
 | Host         : billionaire-he-will-be running 64-bit Ubuntu 23.10
 | Command      : report_control_sets -verbose -file design_1_wrapper_control_sets_placed.rpt
 | Design       : design_1_wrapper
@@ -27,7 +27,7 @@ Table of Contents
 |    Minimum number of control sets                        |    10 |
 |    Addition due to synthesis replication                 |     0 |
 |    Addition due to physical synthesis replication        |     0 |
-| Unused register locations in slices containing registers |    19 |
+| Unused register locations in slices containing registers |    18 |
 +----------------------------------------------------------+-------+
 * Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
 ** Run report_qor_suggestions for automated merging and remapping suggestions
@@ -60,29 +60,29 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | No           | No                    | No                     |               3 |            2 |
 | No           | No                    | Yes                    |               0 |            0 |
-| No           | Yes                   | No                     |            1635 |          399 |
+| No           | Yes                   | No                     |             116 |           34 |
 | Yes          | No                    | No                     |               0 |            0 |
 | Yes          | No                    | Yes                    |               0 |            0 |
-| Yes          | Yes                   | No                     |            1575 |          301 |
+| Yes          | Yes                   | No                     |              87 |           22 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
 4. Detailed Control Set Information
 -----------------------------------
 
-+-----------------+--------------------------------------------------------------------------------+--------------------------------------------+------------------+----------------+--------------+
-|   Clock Signal  |                                  Enable Signal                                 |              Set/Reset Signal              | Slice Load Count | Bel Load Count | Bels / Slice |
-+-----------------+--------------------------------------------------------------------------------+--------------------------------------------+------------------+----------------+--------------+
-|  iClk_IBUF_BUFG |                                                                                |                                            |                2 |              3 |         1.50 |
-|  iClk_IBUF_BUFG | design_1_i/uart_top_0/inst/UART_RX_INST/E[0]                                   | design_1_i/Debounce_Switch_0/inst/o_Switch |                3 |              7 |         2.33 |
-|  iClk_IBUF_BUFG | design_1_i/uart_top_0/inst/UART_TX_INST/wTxData_Next                           | design_1_i/Debounce_Switch_0/inst/o_Switch |                2 |              8 |         4.00 |
-|  iClk_IBUF_BUFG | design_1_i/uart_top_0/inst/UART_RX_INST/wBufferNext                            | design_1_i/Debounce_Switch_0/inst/o_Switch |                1 |              8 |         8.00 |
-|  iClk_IBUF_BUFG | design_1_i/uart_top_0/inst/rTxByte                                             | design_1_i/Debounce_Switch_0/inst/o_Switch |                2 |              8 |         4.00 |
-|  iClk_IBUF_BUFG |                                                                                | design_1_i/Debounce_Switch_0/inst/p_0_in   |                5 |             18 |         3.60 |
-|  iClk_IBUF_BUFG | design_1_i/uart_top_0/inst/UART_RX_INST/FSM_sequential_rFSM_reg[0]_rep__2[0]   | design_1_i/Debounce_Switch_0/inst/o_Switch |               73 |            512 |         7.01 |
-|  iClk_IBUF_BUFG | design_1_i/uart_top_0/inst/UART_RX_INST/FSM_sequential_rFSM_reg[0]_rep__2_0[0] | design_1_i/Debounce_Switch_0/inst/o_Switch |               80 |            512 |         6.40 |
-|  iClk_IBUF_BUFG | design_1_i/uart_top_0/inst/MP_ADDER_INST/E[0]                                  | design_1_i/Debounce_Switch_0/inst/o_Switch |              140 |            520 |         3.71 |
-|  iClk_IBUF_BUFG |                                                                                | design_1_i/Debounce_Switch_0/inst/o_Switch |              394 |           1617 |         4.10 |
-+-----------------+--------------------------------------------------------------------------------+--------------------------------------------+------------------+----------------+--------------+
++-----------------+--------------------------------------------------------------------+--------------------------------------------+------------------+----------------+--------------+
+|   Clock Signal  |                            Enable Signal                           |              Set/Reset Signal              | Slice Load Count | Bel Load Count | Bels / Slice |
++-----------------+--------------------------------------------------------------------+--------------------------------------------+------------------+----------------+--------------+
+|  iClk_IBUF_BUFG |                                                                    |                                            |                2 |              3 |         1.50 |
+|  iClk_IBUF_BUFG | design_1_i/uart_top_0/inst/MP_ADDER_INST/E[0]                      | design_1_i/Debounce_Switch_0/inst/o_Switch |                2 |              7 |         3.50 |
+|  iClk_IBUF_BUFG | design_1_i/uart_top_0/inst/rTxByte_0                               | design_1_i/Debounce_Switch_0/inst/o_Switch |                3 |              8 |         2.67 |
+|  iClk_IBUF_BUFG | design_1_i/uart_top_0/inst/UART_RX_INST/wBufferNext                | design_1_i/Debounce_Switch_0/inst/o_Switch |                2 |              8 |         4.00 |
+|  iClk_IBUF_BUFG | design_1_i/uart_top_0/inst/UART_TX_INST/wTxData_Next               | design_1_i/Debounce_Switch_0/inst/o_Switch |                2 |              8 |         4.00 |
+|  iClk_IBUF_BUFG | design_1_i/uart_top_0/inst/UART_RX_INST/FSM_onehot_rFSM_reg[2][0]  | design_1_i/Debounce_Switch_0/inst/o_Switch |                5 |             16 |         3.20 |
+|  iClk_IBUF_BUFG | design_1_i/uart_top_0/inst/UART_RX_INST/E[0]                       | design_1_i/Debounce_Switch_0/inst/o_Switch |                3 |             16 |         5.33 |
+|  iClk_IBUF_BUFG |                                                                    | design_1_i/Debounce_Switch_0/inst/p_0_in   |                5 |             18 |         3.60 |
+|  iClk_IBUF_BUFG | design_1_i/uart_top_0/inst/MP_ADDER_INST/FSM_onehot_rFSM_reg[4][0] | design_1_i/Debounce_Switch_0/inst/o_Switch |                5 |             24 |         4.80 |
+|  iClk_IBUF_BUFG |                                                                    | design_1_i/Debounce_Switch_0/inst/o_Switch |               29 |             98 |         3.38 |
++-----------------+--------------------------------------------------------------------+--------------------------------------------+------------------+----------------+--------------+
 
 

@@ -1,8 +1,8 @@
 `timescale 1ns / 1ps
 
 module uart_top #(
-    parameter OPERAND_WIDTH   = 512, 
-    parameter ADDER_WIDTH     = 16,
+    parameter OPERAND_WIDTH   = 16, 
+    parameter ADDER_WIDTH     = 8,
     parameter   NBYTES        = OPERAND_WIDTH / 8,
     // values for the UART (in case we want to change them)
     parameter   CLK_FREQ      = 125_000_000,
@@ -11,6 +11,7 @@ module uart_top #(
   ( // what we create here is basically a top level, controller transmission as well as receiving on fpga
     input   wire   iClk, iRst,
     input   wire   iRx,
+    input   wire   iBtn,
     output  wire   oTx
   );
 
@@ -41,7 +42,7 @@ module uart_top #(
   // registers for storing ops and result.
   reg [NBYTES*8 - 1: 0] rA, rB;
   reg [(NBYTES + 1)*8 - 1: 0] rResult;
-  wire [(NBYTES + 1)*8 - 1: 0] wResult; // output of adder that will be stored in rResult when addition is done.
+  wire [(NBYTES)*8: 0] wResult; // output of adder that will be stored in rResult when addition is done.
   reg rStartAdder;
   wire wAdderDone;
 
@@ -68,6 +69,7 @@ module uart_top #(
   mp_adder #(.ADDER_WIDTH(ADDER_WIDTH), .OPERAND_WIDTH(OPERAND_WIDTH))
   MP_ADDER_INST
     (.iClk(iClk),
+     .iBtn(iBtn),
      .iRst(iRst),
      .iStart(rStartAdder),
      .iOpA(rA),

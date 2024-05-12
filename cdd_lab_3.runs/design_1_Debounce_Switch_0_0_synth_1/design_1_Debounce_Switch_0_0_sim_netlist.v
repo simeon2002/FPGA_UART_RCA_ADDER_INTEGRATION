@@ -1,7 +1,7 @@
 // Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2020.1 (lin64) Build 2902540 Wed May 27 19:54:35 MDT 2020
-// Date        : Tue Mar 19 22:47:42 2024
+// Date        : Sun May 12 10:57:50 2024
 // Host        : billionaire-he-will-be running 64-bit Ubuntu 23.10
 // Command     : write_verilog -force -mode funcsim -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
 //               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ design_1_Debounce_Switch_0_0_sim_netlist.v
@@ -350,7 +350,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix
    (i_Clk,
     i_Switch,
     o_Switch);
-  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 i_Clk CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME i_Clk, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.000, CLK_DOMAIN design_1_i_Clk_0, INSERT_VIP 0" *) input i_Clk;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 i_Clk CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME i_Clk, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.000, CLK_DOMAIN design_1_iClk, INSERT_VIP 0" *) input i_Clk;
   input i_Switch;
   output o_Switch;
 

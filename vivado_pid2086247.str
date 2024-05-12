@@ -1,0 +1,163 @@
+/*
+
+Xilinx Vivado v2020.1 (64-bit) [Major: 2020, Minor: 1]
+SW Build: 2902540 on Wed May 27 19:54:35 MDT 2020
+IP Build: 2902112 on Wed May 27 22:43:36 MDT 2020
+
+Process ID (PID): 2086247
+License: Customer
+
+Current time: 	Sun May 12 11:14:11 CEST 2024
+Time zone: 	Central European Standard Time (Europe/Brussels)
+
+OS: Ubuntu
+OS Version: 6.5.0-060500-generic
+OS Architecture: amd64
+Available processors (cores): 16
+
+Display: :1
+Screen size: 1920x1080
+Screen resolution (DPI): 100
+Available screens: 2
+Default font: family=Dialog,name=Dialog,style=plain,size=15
+
+Java version: 	9.0.4 64-bit
+Java home: 	/tools/Xilinx/Vivado/2020.1/tps/lnx64/jre9.0.4
+Java executable location: 	/tools/Xilinx/Vivado/2020.1/tps/lnx64/jre9.0.4/bin/java
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	sims0702
+User home directory: /home/sims0702
+User working directory: /home/sims0702/Documents/University/phase-3-courses/complex-digital-design/cdd_lab_3
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: /tools/Xilinx/Vivado
+HDI_APPROOT: /tools/Xilinx/Vivado/2020.1
+RDI_DATADIR: /tools/Xilinx/Vivado/2020.1/data
+RDI_BINDIR: /tools/Xilinx/Vivado/2020.1/bin
+
+Vivado preferences file location: /home/sims0702/.Xilinx/Vivado/2020.1/vivado.xml
+Vivado preferences directory: /home/sims0702/.Xilinx/Vivado/2020.1/
+Vivado layouts directory: /home/sims0702/.Xilinx/Vivado/2020.1/data/layouts
+PlanAhead jar file location: 	/tools/Xilinx/Vivado/2020.1/lib/classes/planAhead.jar
+Vivado log file location: 	/home/sims0702/Documents/University/phase-3-courses/complex-digital-design/cdd_lab_3/vivado.log
+Vivado journal file location: 	/home/sims0702/Documents/University/phase-3-courses/complex-digital-design/cdd_lab_3/vivado.jou
+Engine tmp dir: 	./.Xil/Vivado-2086247-billionaire-he-will-be
+
+Xilinx Environment Variables
+----------------------------
+XILINX: /tools/Xilinx/Vivado/2020.1/ids_lite/ISE
+XILINX_DSP: /tools/Xilinx/Vivado/2020.1/ids_lite/ISE
+XILINX_PLANAHEAD: /tools/Xilinx/Vivado/2020.1
+XILINX_SDK: /tools/Xilinx/Vitis/2020.1
+XILINX_VITIS: /tools/Xilinx/Vitis/2020.1
+XILINX_VIVADO: /tools/Xilinx/Vivado/2020.1
+XILINX_VIVADO_HLS: /tools/Xilinx/Vivado/2020.1
+
+
+GUI allocated memory:	185 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 1,466 MB
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// bz (cs):  Open Project : addNotify
+// Opening Vivado Project: cdd_lab_3.xpr. Version: Vivado v2020.1 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_CURRENT
+// TclEventType: MSGMGR_REFRESH_MSG
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 129 MB (+132728kb) [00:00:07]
+// [Engine Memory]: 1,445 MB (+1363237kb) [00:00:07]
+// WARNING: HEventQueue.dispatchEvent() is taking  2858 ms.
+// Tcl Message: open_project cdd_lab_3.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2020.1/data/ip'. 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,470 MB. GUI used memory: 64 MB. Current time: 5/12/24, 11:14:11 AM CEST
+// Project name: cdd_lab_3; location: /home/sims0702/Documents/University/phase-3-courses/complex-digital-design/cdd_lab_3; part: xc7z020clg400-1
+dismissDialog("Open Project"); // bz (cs)
+// Tcl Command: 'rdi::info_commands {device::*}'
+// Tcl Command: 'rdi::info_commands {debug::*}'
+// Tcl Command: 'rdi::info_commands {*}'
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// [GUI Memory]: 136 MB (+1129kb) [00:00:15]
+// [Engine Memory]: 1,696 MB (+188106kb) [00:00:15]
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: DG_GRAPH_STALE
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 0, true); // B (F, cs) - Node
+// Tcl Message: update_compile_order -fileset sources_1 
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, uart_top (uart_top.v)]", 2, true); // B (F, cs) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, uart_top (uart_top.v)]", 2, true, false, false, false, false, true); // B (F, cs) - Double Click - Node
+// [GUI Memory]: 155 MB (+11987kb) [00:00:23]
+// Elapsed time: 47 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 10, false); // u (J, cs)
+selectMenuItem(PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, "Run Behavioral Simulation"); // ai (ao, cs)
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL
+// e (cs):  Run Simulation : addNotify
+// TclEventType: LAUNCH_SIM
+// TclEventType: LOAD_FEATURE
+// Tcl Message: launch_simulation 
+// Tcl Message: Command: launch_simulation  
+// Tcl Message: INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator... 
+// TclEventType: RSB_CHANGE_CURRENT_DIAGRAM
+// TclEventType: LOAD_FEATURE
+// TclEventType: RSB_LOCK_CHANGE
+// TclEventType: RSB_CLOSE_DIAGRAM
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: LAUNCH_SIM_LOG
+// Tcl Message: INFO: [USF-XSim-69] 'compile' step finished in '1' seconds INFO: [USF-XSim-3] XSim::Elaborate design INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/sims0702/Documents/University/phase-3-courses/complex-digital-design/cdd_lab_3/cdd_lab_3.sim/sim_1/behav/xsim' 
+// TclEventType: LAUNCH_SIM
+// TclEventType: LOAD_FEATURE
+// Tcl Message: Built simulation snapshot uart_top_TB_behav 
+// Tcl Message: INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds INFO: [USF-XSim-4] XSim::Simulate design INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/sims0702/Documents/University/phase-3-courses/complex-digital-design/cdd_lab_3/cdd_lab_3.sim/sim_1/behav/xsim' INFO: [USF-XSim-98] *** Running xsim 
+// Tcl Message:    with args "uart_top_TB_behav -key {Behavioral:sim_1:Functional:uart_top_TB} -tclbatch {uart_top_TB.tcl} -protoinst "protoinst_files/design_1.protoinst" -log {simulate.log}" 
+// Tcl Message: INFO: [USF-XSim-8] Loading simulator feature 
+// Tcl Message: Vivado Simulator 2020.1 
+// TclEventType: SIMULATION_CREATE_SIMULATION_OBJECT
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE

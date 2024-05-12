@@ -20,7 +20,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='/home/sims0702/cdd_lab_2/cdd_lab_2.runs/design_1_Debounce_Switch_0_0_synth_1'
+HD_PWD='/home/sims0702/Documents/University/phase-3-courses/complex-digital-design/cdd_lab_3/cdd_lab_3.runs/design_1_Debounce_Switch_0_0_synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

@@ -18,7 +18,8 @@ module uart_top_TB ();
   reg [7:0] rTxByte;
   reg [OPERAND_WIDTH-1:0] rOpA, rOpB;
   reg opFlag = 0; // ropa transmission = 0, ropb transmission = 1
-  
+  reg riBtn;
+  reg result;
     
 
   
@@ -32,13 +33,32 @@ module uart_top_TB ();
      .oTxDone(wTxDone)
      );
      
-     
+  reg riBtn;
   // Instantiate DUT  
   uart_top 
   #( .NBYTES(2), .CLK_FREQ(CLK_FREQ_inst), .NBYTES(16), .BAUD_RATE(BAUD_RATE_inst), .OPERAND_WIDTH(OPERAND_WIDTH), .ADDER_WIDTH(ADDER_WIDTH))
   uart_top_inst
-  ( .iClk(rClk), .iRst(rRst), .iRx(wTxSerial), .oTx(wTx) );
+  ( .iClk(rClk), .iRst(rRst), .iBtn(riBtn), .iRx(wTxSerial), .oTx(wTx) );
+
+
+  wire [7:0] wRxByte;
+  wire       wRxDone;
   
+    uart_receiver #(.CLK_FREQ(CLK_FREQ_inst), .BAUD_RATE(BAUD_RATE_inst) )
+  UART_RX_INST
+    (.iClk(rClk),
+     .iRst(rRst),
+     .iRxSerial(wTx),
+     .oRxByte(wRxByte),
+     .oRxDone(wRxDone)); 
+  
+  reg signed [((OPERAND_WIDTH / 8) + 1) * 8 - 2: 0] rFinalSum;
+  
+  always @(wRxDone) begin
+   if (wRxDone == 1)
+     rFinalSum = {rFinalSum, wRxByte};
+  end
+ 
   // Define clock signal
   localparam CLOCK_PERIOD = 5;
   
@@ -92,13 +112,14 @@ end
  
   initial begin
     rTxStart = 0;
-    rOpA = 128'h12121212_34343434_56565656_78787878;
-    rOpB = 128'hefefefef_cdcdcdcd_abababab_90909090;
-//    rOpA = 128'h000000000000000030000000000000005;
-//    rOpB = 128'h000000000000000030000000000000005;
+//    rOpA = 128'h00000000_34343434_56565656_78787878;
+//    rOpB = 128'h00000000_c6545656_abababab_90909090;
+    rOpA = 128'h000000000000000000000000000000005;
+    rOpB = 128'h0000000000000000000000000000000060;
     rTxByte = rOpA[127:120];
     rRst = 0;
-    
+    riBtn = 0;
+
     #(CLOCK_PERIOD);
     
     rRst = 1;
@@ -109,9 +130,16 @@ end
     rTxStart = 1;
     #(CLOCK_PERIOD);
     rTxStart = 0;
-    
 
-    
+    #(5000*CLOCK_PERIOD);
+$display("received value: %0d .... %0d", rFinalSum[128:0], rOpA-rOpB);
+    if (rFinalSum[127:0] == (rOpA-rOpB))
+        $display ("test succeeded");
+    else
+        $display ("test failed");
+   $display("binary value: %0b", rFinalSum[128:0]);
+   $display("binary value: %0b", rFinalSum);
+   $stop;
    end
 
 endmodule
