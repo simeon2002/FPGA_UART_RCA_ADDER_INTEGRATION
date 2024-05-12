@@ -79,7 +79,7 @@ module mp_adder #(
     wire                    carry_out;
 
     ripple_carry_adder_Nb #( .ADDER_WIDTH(ADDER_WIDTH) ) 
-    ripple_carry_inst   (
+        inst (
         .iA( operandA ), 
         .iB( operandB ),
         .iCarry( carry_in ),
@@ -202,6 +202,7 @@ module mp_adder #(
                 muxB_sel = 1;
                 muxCarry_sel = 0;
                 wCnt_next = rCnt_Current + 1;
+                muxModeSel = 0; // doesn't matter here.
                 
                 wFSM_next = s_ADD_WORDS;
               end
