@@ -1,0 +1,580 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:35 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Sun May 12 12:43:47 2024
+# Process ID: 2154924
+# Current directory: /home/sims0702/Documents/University/phase-3-courses/complex-digital-design/cdd_lab_3
+# Command line: vivado cdd_lab_3.xpr
+# Log file: /home/sims0702/Documents/University/phase-3-courses/complex-digital-design/cdd_lab_3/vivado.log
+# Journal file: /home/sims0702/Documents/University/phase-3-courses/complex-digital-design/cdd_lab_3/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project cdd_lab_3.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+source uart_top_TB.tcl
+open_wave_config {/home/sims0702/Documents/University/phase-3-courses/complex-digital-design/cdd_lab_3/uart_top_TB_behav.wcfg}
+restart
+run all
+add_bp {/home/sims0702/Documents/University/phase-3-courses/complex-digital-design/cdd_lab_3/cdd_lab_3.srcs/sim_1/imports/Downloads/uart_top_TB.v} 58
+run all
+relaunch_sim
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+restart
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+relaunch_sim
+relaunch_sim
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+add_bp {/home/sims0702/Documents/University/phase-3-courses/complex-digital-design/cdd_lab_3/cdd_lab_3.srcs/sim_1/imports/Downloads/uart_top_TB.v} 59
+run all
+run all
+run all
+run all
+run all
+add_bp {/home/sims0702/Documents/University/phase-3-courses/complex-digital-design/cdd_lab_3/cdd_lab_3.srcs/sim_1/imports/Downloads/uart_top_TB.v} 133
+run all
+run all
+run all
+relaunch_sim
+run all
+run all
+run all
+add_bp {/home/sims0702/Documents/University/phase-3-courses/complex-digital-design/cdd_lab_3/cdd_lab_3.srcs/sim_1/imports/Downloads/uart_top_TB.v} 75
+add_bp {/home/sims0702/Documents/University/phase-3-courses/complex-digital-design/cdd_lab_3/cdd_lab_3.srcs/sim_1/imports/Downloads/uart_top_TB.v} 94
+relaunch_sim
+run all
+run all
+save_wave_config {/home/sims0702/Documents/University/phase-3-courses/complex-digital-design/cdd_lab_3/uart_top_TB_behav.wcfg}
+relaunch_sim
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+relaunch_sim
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+remove_bps -file {/home/sims0702/Documents/University/phase-3-courses/complex-digital-design/cdd_lab_3/cdd_lab_3.srcs/sim_1/imports/Downloads/uart_top_TB.v} -line 58
+remove_bps -file {/home/sims0702/Documents/University/phase-3-courses/complex-digital-design/cdd_lab_3/cdd_lab_3.srcs/sim_1/imports/Downloads/uart_top_TB.v} -line 57
+run all
+relaunch_sim
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+relaunch_sim
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+relaunch_sim
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+relaunch_sim
+relaunch_sim
+run all
+run all
+run all
+run all
+relaunch_sim
+run all
+run all
+run all
+run all
+relaunch_sim
+run all
+run all
+run all
+relaunch_sim
+run all
+run all
+run all
+run all
+restart
+run all
+run all
+run all
+run all
+relaunch_sim
+run all
+run all
+run all
+relaunch_sim
+relaunch_sim
+run all
+run all
+run all
+relaunch_sim
+run all
+run all
+run all
+add_bp {/home/sims0702/Documents/University/phase-3-courses/complex-digital-design/cdd_lab_3/cdd_lab_3.srcs/sim_1/imports/Downloads/uart_top_TB.v} 133
+relaunch_sim
+add_bp {/home/sims0702/Documents/University/phase-3-courses/complex-digital-design/cdd_lab_3/cdd_lab_3.srcs/sim_1/imports/Downloads/uart_top_TB.v} 135
+run all
+relaunch_sim
+run all
+run all
+run all
+run all
+restart
+run all
+run all
+run all
+run all
+restart
+run all
+run all
+run all
+run all
+relaunch_sim
+run all
+run all
+run all
+run all
+relaunch_sim
+run all
+run all
+run all
+run all
+relaunch_sim
+run all
+run all
+run all
+run all
+relaunch_sim
+run all
+run all
+run all
+run all
+relaunch_sim
+run all
+run all
+run all
+run all
+relaunch_sim
+run all
+run all
+run all
+run all
+relaunch_sim
+relaunch_sim
+run all
+run all
+run all
+run all
+relaunch_sim
+run all
+run all
+run all
+run all
+relaunch_sim
+run all
+run all
+run all
+run all
+relaunch_sim
+run all
+run all
+run all
+run all
+relaunch_sim
+run all
+run all
+run all
+run all
+relaunch_sim
+run all
+run all
+run all
+run all
+relaunch_sim
+run all
+run all
+run all
+run all
+relaunch_sim
+run all
+run all
+run all
+run all
+relaunch_sim
+run all
+run all
+run all
+run all
+relaunch_sim
+relaunch_sim
+run all
+run all
+run all
+run all
+relaunch_sim
+run all
+run all
+run all
+run all
+relaunch_sim
+run all
+run all
+run all
+run all
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+wait_on_run impl_1
+reset_run impl_1
+close [ open /home/sims0702/Documents/University/phase-3-courses/complex-digital-design/cdd_lab_3/cdd_lab_3.srcs/sources_1/new/uart_top_rh.v w ]
+add_files /home/sims0702/Documents/University/phase-3-courses/complex-digital-design/cdd_lab_3/cdd_lab_3.srcs/sources_1/new/uart_top_rh.v
+update_compile_order -fileset sources_1
+update_compile_order -fileset sim_1
+relaunch_sim
+relaunch_sim
+update_compile_order -fileset sim_1
+run all
+run all
+run all
+run all
+run all
+relaunch_sim
+update_compile_order -fileset sim_1
+relaunch_sim
+update_compile_order -fileset sim_1
+relaunch_sim
+launch_simulation -mode post-synthesis -type functional
+close_sim
+launch_simulation
+source uart_top_TB.tcl
+run all
+run all
+run all
+run all
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+wait_on_run impl_1
+open_hw_manager
+update_module_reference design_1_uart_top_0_0
+close_bd_design [get_bd_designs design_1]
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {/home/sims0702/Documents/University/phase-3-courses/complex-digital-design/cdd_lab_3/cdd_lab_3.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xc7z020_1]
+current_hw_device [get_hw_devices xc7z020_1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z020_1] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {/home/sims0702/Documents/University/phase-3-courses/complex-digital-design/cdd_lab_3/cdd_lab_3.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+close_hw_manager
+close_sim
+launch_simulation
+source uart_top_TB.tcl
+run all
+run all
+run all
+run all
+relaunch_sim
+run all
+run all
+run all
+relaunch_sim
+run all
+run all
+run all
+relaunch_sim
+run all
+run all
+run all
+relaunch_sim
+run all
+run all
+run all
+relaunch_sim
+relaunch_sim
+run all
+run all
+run all
+run all
+close_sim
+close [ open /home/sims0702/Documents/University/phase-3-courses/complex-digital-design/cdd_lab_3/cdd_lab_3.srcs/sources_1/new/partial_full_adder.v w ]
+add_files /home/sims0702/Documents/University/phase-3-courses/complex-digital-design/cdd_lab_3/cdd_lab_3.srcs/sources_1/new/partial_full_adder.v
+update_compile_order -fileset sources_1
+import_files -norecurse {/home/sims0702/Downloads/carry_lookahead_adder.v /home/sims0702/Downloads/carry_select_adder_cla.v}
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_module_reference design_1_uart_top_0_0
+close_bd_design [get_bd_designs design_1]
+close_project
+open_project /home/sims0702/Documents/University/phase-3-courses/complex-digital-design/cdd_lab_3/cdd_lab_3.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+source uart_top_TB.tcl
+run all
+run all
+run all
+relaunch_sim
+run all
+run all
+run all
+run all
+relaunch_sim
+run all
+run all
+run all
+relaunch_sim
+run all
+run all
+run all
+relaunch_sim
+run all
+run all
+run all
+run all
+run all
+relaunch_sim
+run all
+run all
+run all
+run all
+relaunch_sim
+relaunch_sim
+run all
+run all
+run all
+run all
+relaunch_sim
+run all
+run all
+run all
+relaunch_sim
+run all
+run all
+run all
+relaunch_sim
+run all
+run all
+run all
+run all
+relaunch_sim
+run all
+run all
+run all
+run all
+relaunch_sim
+run all
+run all
+run all
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+run all
+run all
+run all
+run all
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+wait_on_run impl_1
+run all
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {/home/sims0702/Documents/University/phase-3-courses/complex-digital-design/cdd_lab_3/cdd_lab_3.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xc7z020_1]
+current_hw_device [get_hw_devices xc7z020_1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z020_1] 0]
+update_module_reference design_1_uart_top_0_0
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top mp_adder [current_fileset]
+set_property top_lib xil_defaultlib [current_fileset]
+set_property top_file /home/sims0702/Documents/University/phase-3-courses/complex-digital-design/cdd_lab_3/cdd_lab_3.srcs/sources_1/new/mp_adder.v [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+open_bd_design {/home/sims0702/Documents/University/phase-3-courses/complex-digital-design/cdd_lab_3/cdd_lab_3.srcs/sources_1/bd/design_1/design_1.bd}
+reset_run synth_1
+launch_runs synth_1 -jobs 6
+wait_on_run synth_1
+open_run synth_1 -name synth_1
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+reset_run synth_1
+launch_runs synth_1 -jobs 6
+wait_on_run synth_1
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_2
+refresh_design
+close_design
+update_module_reference design_1_uart_top_0_0
+reset_run synth_1
+launch_runs synth_1 -jobs 6
+wait_on_run synth_1
+open_run synth_1 -name synth_1
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name CSA_32bit
+report_utilization -name csa_32bit_port_utilization
+reset_run synth_1
+update_module_reference design_1_uart_top_0_0
+launch_runs synth_1 -jobs 6
+wait_on_run synth_1
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+refresh_design
+reset_run synth_1
+launch_runs synth_1 -jobs 6
+wait_on_run synth_1
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+report_utilization -name utilization_1
+report_utilization -name utilization_2
+report_power -name {power_1}
+refresh_design
+reset_run synth_1
+update_module_reference design_1_uart_top_0_0
+launch_runs synth_1 -jobs 6
+wait_on_run synth_1
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+refresh_design
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_2
+report_utilization -name utilization_1
+reset_run synth_1
+launch_runs synth_1 -jobs 6
+wait_on_run synth_1
+close_design
+open_run synth_1 -name synth_1
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+reset_run synth_1
+update_module_reference design_1_uart_top_0_0
+launch_runs synth_1 -jobs 6
+wait_on_run synth_1
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_2
+refresh_design
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+report_utilization -name utilization_1
+reset_run synth_1
+update_module_reference design_1_uart_top_0_0
+launch_runs synth_1 -jobs 6
+wait_on_run synth_1

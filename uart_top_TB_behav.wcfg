@@ -11,18 +11,20 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="808734fs"></ZoomStartTime>
-      <ZoomEndTime time="984335fs"></ZoomEndTime>
-      <Cursor1Time time="838000fs"></Cursor1Time>
+      <ZoomStartTime time="859447fs"></ZoomStartTime>
+      <ZoomEndTime time="8125040fs"></ZoomEndTime>
+      <Cursor1Time time="13104827fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="258"></NameColumnWidth>
-      <ValueColumnWidth column_width="448"></ValueColumnWidth>
+      <NameColumnWidth column_width="195"></NameColumnWidth>
+      <ValueColumnWidth column_width="425"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="12" />
+   <WVObjectSize size="10" />
    <wave_markers>
       <marker label="" time="13118000" />
-      <marker label="" time="19287894" />
+      <marker label="" time="20118000" />
+      <marker label="" time="13094000" />
+      <marker label="" time="13110000" />
    </wave_markers>
    <wvobject type="logic" fp_name="/uart_top_TB/rRst">
       <obj_property name="ElementShortName">rRst</obj_property>
@@ -35,7 +37,6 @@
    <wvobject type="group" fp_name="group88">
       <obj_property name="label">uart tx signals top</obj_property>
       <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="isExpanded"></obj_property>
       <wvobject type="array" fp_name="/uart_top_TB/uart_top_inst/UART_TX_INST/iTxByte">
          <obj_property name="ElementShortName">iTxByte[7:0]</obj_property>
          <obj_property name="ObjectShortName">iTxByte[7:0]</obj_property>
@@ -79,10 +80,6 @@
       <wvobject type="array" fp_name="/uart_top_TB/uart_top_inst/UART_TX_INST/wTxData_Next">
          <obj_property name="ElementShortName">wTxData_Next[7:0]</obj_property>
          <obj_property name="ObjectShortName">wTxData_Next[7:0]</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/uart_top_TB/uart_top_inst/UART_TX_INST/rTestingStorage">
-         <obj_property name="ElementShortName">rTestingStorage[135:0]</obj_property>
-         <obj_property name="ObjectShortName">rTestingStorage[135:0]</obj_property>
       </wvobject>
    </wvobject>
    <wvobject fp_name="divider48" type="divider">
@@ -150,6 +147,14 @@
          <obj_property name="ElementShortName">rTxByte[7:0]</obj_property>
          <obj_property name="ObjectShortName">rTxByte[7:0]</obj_property>
       </wvobject>
+      <wvobject type="array" fp_name="/uart_top_TB/wRxByte">
+         <obj_property name="ElementShortName">wRxByte[7:0]</obj_property>
+         <obj_property name="ObjectShortName">wRxByte[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/uart_top_TB/wRxDone">
+         <obj_property name="ElementShortName">wRxDone</obj_property>
+         <obj_property name="ObjectShortName">wRxDone</obj_property>
+      </wvobject>
       <wvobject type="array" fp_name="/uart_top_TB/rOpA">
          <obj_property name="ElementShortName">rOpA[127:0]</obj_property>
          <obj_property name="ObjectShortName">rOpA[127:0]</obj_property>
@@ -209,16 +214,45 @@
          <obj_property name="ObjectShortName">wTxData_Next[7:0]</obj_property>
       </wvobject>
    </wvobject>
-   <wvobject type="array" fp_name="/uart_top_TB/wRxByte">
-      <obj_property name="ElementShortName">wRxByte[7:0]</obj_property>
-      <obj_property name="ObjectShortName">wRxByte[7:0]</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/uart_top_TB/wRxDone">
-      <obj_property name="ElementShortName">wRxDone</obj_property>
-      <obj_property name="ObjectShortName">wRxDone</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/uart_top_TB/rFinalSum">
-      <obj_property name="ElementShortName">rFinalSum[135:0]</obj_property>
-      <obj_property name="ObjectShortName">rFinalSum[135:0]</obj_property>
+   <wvobject type="group" fp_name="group122">
+      <obj_property name="label">mp_adder</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject type="array" fp_name="/uart_top_TB/uart_top_inst/MP_ADDER_INST/operandA">
+         <obj_property name="ElementShortName">operandA[63:0]</obj_property>
+         <obj_property name="ObjectShortName">operandA[63:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/uart_top_TB/uart_top_inst/MP_ADDER_INST/operandB">
+         <obj_property name="ElementShortName">operandB[63:0]</obj_property>
+         <obj_property name="ObjectShortName">operandB[63:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/uart_top_TB/uart_top_inst/MP_ADDER_INST/regResult">
+         <obj_property name="ElementShortName">regResult[127:0]</obj_property>
+         <obj_property name="ObjectShortName">regResult[127:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/uart_top_TB/uart_top_inst/MP_ADDER_INST/regCout">
+         <obj_property name="ElementShortName">regCout</obj_property>
+         <obj_property name="ObjectShortName">regCout</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/uart_top_TB/uart_top_inst/MP_ADDER_INST/oRes">
+         <obj_property name="ElementShortName">oRes[128:0]</obj_property>
+         <obj_property name="ObjectShortName">oRes[128:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/uart_top_TB/uart_top_inst/MP_ADDER_INST/iStart">
+         <obj_property name="ElementShortName">iStart</obj_property>
+         <obj_property name="ObjectShortName">iStart</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/uart_top_TB/uart_top_inst/MP_ADDER_INST/oDone">
+         <obj_property name="ElementShortName">oDone</obj_property>
+         <obj_property name="ObjectShortName">oDone</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/uart_top_TB/uart_top_inst/MP_ADDER_INST/rFSM_current">
+         <obj_property name="ElementShortName">rFSM_current[2:0]</obj_property>
+         <obj_property name="ObjectShortName">rFSM_current[2:0]</obj_property>
+      </wvobject>
    </wvobject>
 </wave_config>

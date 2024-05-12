@@ -1,0 +1,49 @@
++--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+
+|       Launch Clock       |      Capture Clock       |                                                 Pin                                                      |
++--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+
+|              sys_clk_pin |              sys_clk_pin |                                                design_1_i/uart_top_0/inst/MP_ADDER_INST/regB_Q_reg[394]/D|
+|              sys_clk_pin |              sys_clk_pin |                                                design_1_i/uart_top_0/inst/MP_ADDER_INST/regB_Q_reg[278]/D|
+|              sys_clk_pin |              sys_clk_pin |                                                design_1_i/uart_top_0/inst/MP_ADDER_INST/regB_Q_reg[404]/D|
+|              sys_clk_pin |              sys_clk_pin |                                                design_1_i/uart_top_0/inst/MP_ADDER_INST/regB_Q_reg[293]/D|
+|              sys_clk_pin |              sys_clk_pin |                                             design_1_i/uart_top_0/inst/MP_ADDER_INST/regResult_reg[455]/D|
+|              sys_clk_pin |              sys_clk_pin |                                                design_1_i/uart_top_0/inst/MP_ADDER_INST/regB_Q_reg[266]/D|
+|              sys_clk_pin |              sys_clk_pin |                                                design_1_i/uart_top_0/inst/MP_ADDER_INST/regB_Q_reg[264]/D|
+|              sys_clk_pin |              sys_clk_pin |                                                design_1_i/uart_top_0/inst/MP_ADDER_INST/regB_Q_reg[267]/D|
+|              sys_clk_pin |              sys_clk_pin |                                                design_1_i/uart_top_0/inst/MP_ADDER_INST/regB_Q_reg[291]/D|
+|              sys_clk_pin |              sys_clk_pin |                                                design_1_i/uart_top_0/inst/MP_ADDER_INST/regB_Q_reg[309]/D|
+|              sys_clk_pin |              sys_clk_pin |                                                design_1_i/uart_top_0/inst/MP_ADDER_INST/regB_Q_reg[375]/D|
+|              sys_clk_pin |              sys_clk_pin |                                                design_1_i/uart_top_0/inst/MP_ADDER_INST/regB_Q_reg[282]/D|
+|              sys_clk_pin |              sys_clk_pin |                                                design_1_i/uart_top_0/inst/MP_ADDER_INST/regB_Q_reg[295]/D|
+|              sys_clk_pin |              sys_clk_pin |                                                design_1_i/uart_top_0/inst/MP_ADDER_INST/regB_Q_reg[263]/D|
+|              sys_clk_pin |              sys_clk_pin |                                                design_1_i/uart_top_0/inst/MP_ADDER_INST/regB_Q_reg[275]/D|
+|              sys_clk_pin |              sys_clk_pin |                                                design_1_i/uart_top_0/inst/MP_ADDER_INST/regB_Q_reg[450]/D|
+|              sys_clk_pin |              sys_clk_pin |                                                design_1_i/uart_top_0/inst/MP_ADDER_INST/regB_Q_reg[427]/D|
+|              sys_clk_pin |              sys_clk_pin |                                                design_1_i/uart_top_0/inst/MP_ADDER_INST/regB_Q_reg[502]/D|
+|              sys_clk_pin |              sys_clk_pin |                                                design_1_i/uart_top_0/inst/MP_ADDER_INST/regB_Q_reg[494]/D|
+|              sys_clk_pin |              sys_clk_pin |                                                design_1_i/uart_top_0/inst/MP_ADDER_INST/regB_Q_reg[287]/D|
+|              sys_clk_pin |              sys_clk_pin |                                                design_1_i/uart_top_0/inst/MP_ADDER_INST/regB_Q_reg[504]/D|
+|              sys_clk_pin |              sys_clk_pin |                                                design_1_i/uart_top_0/inst/MP_ADDER_INST/regB_Q_reg[294]/D|
+|              sys_clk_pin |              sys_clk_pin |                                                design_1_i/uart_top_0/inst/MP_ADDER_INST/regB_Q_reg[374]/D|
+|              sys_clk_pin |              sys_clk_pin |                                                design_1_i/uart_top_0/inst/MP_ADDER_INST/regB_Q_reg[324]/D|
+|              sys_clk_pin |              sys_clk_pin |                                                design_1_i/uart_top_0/inst/MP_ADDER_INST/regB_Q_reg[472]/D|
+|              sys_clk_pin |              sys_clk_pin |                                                design_1_i/uart_top_0/inst/MP_ADDER_INST/regB_Q_reg[260]/D|
+|              sys_clk_pin |              sys_clk_pin |                                                design_1_i/uart_top_0/inst/MP_ADDER_INST/regB_Q_reg[279]/D|
+|              sys_clk_pin |              sys_clk_pin |                                                design_1_i/uart_top_0/inst/MP_ADDER_INST/regB_Q_reg[392]/D|
+|              sys_clk_pin |              sys_clk_pin |                                                design_1_i/uart_top_0/inst/MP_ADDER_INST/regB_Q_reg[311]/D|
+|              sys_clk_pin |              sys_clk_pin |                                                design_1_i/uart_top_0/inst/MP_ADDER_INST/regB_Q_reg[299]/D|
+|              sys_clk_pin |              sys_clk_pin |                                                design_1_i/uart_top_0/inst/MP_ADDER_INST/regB_Q_reg[304]/D|
+|              sys_clk_pin |              sys_clk_pin |                                                design_1_i/uart_top_0/inst/MP_ADDER_INST/regB_Q_reg[323]/D|
+|              sys_clk_pin |              sys_clk_pin |                                                design_1_i/uart_top_0/inst/MP_ADDER_INST/regB_Q_reg[306]/D|
+|              sys_clk_pin |              sys_clk_pin |                                                design_1_i/uart_top_0/inst/MP_ADDER_INST/regB_Q_reg[342]/D|
+|              sys_clk_pin |              sys_clk_pin |                                                design_1_i/uart_top_0/inst/MP_ADDER_INST/regB_Q_reg[272]/D|
+|              sys_clk_pin |              sys_clk_pin |                                                design_1_i/uart_top_0/inst/MP_ADDER_INST/regB_Q_reg[270]/D|
+|              sys_clk_pin |              sys_clk_pin |                                                design_1_i/uart_top_0/inst/MP_ADDER_INST/regB_Q_reg[484]/D|
+|              sys_clk_pin |              sys_clk_pin |                                                design_1_i/uart_top_0/inst/MP_ADDER_INST/regB_Q_reg[505]/D|
+|              sys_clk_pin |              sys_clk_pin |                                                design_1_i/uart_top_0/inst/MP_ADDER_INST/regB_Q_reg[334]/D|
+|              sys_clk_pin |              sys_clk_pin |                                                design_1_i/uart_top_0/inst/MP_ADDER_INST/regB_Q_reg[286]/D|
+|              sys_clk_pin |              sys_clk_pin |                                                design_1_i/uart_top_0/inst/MP_ADDER_INST/regB_Q_reg[301]/D|
+|              sys_clk_pin |              sys_clk_pin |                                                design_1_i/uart_top_0/inst/MP_ADDER_INST/regB_Q_reg[298]/D|
+|              sys_clk_pin |              sys_clk_pin |                                                design_1_i/uart_top_0/inst/MP_ADDER_INST/regB_Q_reg[292]/D|
+|              sys_clk_pin |              sys_clk_pin |                                                design_1_i/uart_top_0/inst/MP_ADDER_INST/regB_Q_reg[485]/D|
+|              sys_clk_pin |              sys_clk_pin |                                                design_1_i/uart_top_0/inst/MP_ADDER_INST/regB_Q_reg[307]/D|
++--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+

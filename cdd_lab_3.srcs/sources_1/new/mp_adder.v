@@ -6,7 +6,7 @@ module mp_adder #(
       // if the operands you want to add have an OPERAND_WIDTH non-multiple of ADDER_WIDTH
       //   you'll have to extend them by padding them with zeroes
       parameter OPERAND_WIDTH = 512,
-      parameter ADDER_WIDTH   = 16,
+      parameter ADDER_WIDTH   = 32,
       parameter N_ITERATIONS  = OPERAND_WIDTH / ADDER_WIDTH
     )
     (
@@ -77,9 +77,9 @@ module mp_adder #(
     wire                    carry_in;
     wire [ADDER_WIDTH-1:0]  result;
     wire                    carry_out;
-
-    ripple_carry_adder_Nb #( .ADDER_WIDTH(ADDER_WIDTH) ) 
-    ripple_carry_inst   (
+    
+      carry_select_adder_cla #( .ADDER_WIDTH(ADDER_WIDTH), .BLOCK_SIZE(4))
+        inst (
         .iA( operandA ), 
         .iB( operandB ),
         .iCarry( carry_in ),
@@ -124,7 +124,7 @@ module mp_adder #(
     assign carry_in = muxCarryIn;
 
     // Describe the output signal oRes: it is the concatenation of output registers
-    assign oRes = {regCout, regResult};
+    assign oRes = (iBtn == 1) ? {regCout, regResult} : {8'b1, regResult};
 
     // note: conclusion about datapath is that it is very easy. It is a literal translation of the circuit that is created in the design phase. 
     // the muxes are just if statement as seen, then the connections are just assigned as wires and in-between registers are used for storing 

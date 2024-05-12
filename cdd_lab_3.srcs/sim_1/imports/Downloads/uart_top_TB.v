@@ -18,7 +18,6 @@ module uart_top_TB ();
   reg [7:0] rTxByte;
   reg [OPERAND_WIDTH-1:0] rOpA, rOpB;
   reg opFlag = 0; // ropa transmission = 0, ropb transmission = 1
-  reg riBtn;
   reg result;
     
 
@@ -35,10 +34,10 @@ module uart_top_TB ();
      
   reg riBtn;
   // Instantiate DUT  
-  uart_top 
-  #( .NBYTES(2), .CLK_FREQ(CLK_FREQ_inst), .NBYTES(16), .BAUD_RATE(BAUD_RATE_inst), .OPERAND_WIDTH(OPERAND_WIDTH), .ADDER_WIDTH(ADDER_WIDTH))
+  uart_top
+  #( .CLK_FREQ(CLK_FREQ_inst), .BAUD_RATE(BAUD_RATE_inst), .OPERAND_WIDTH(OPERAND_WIDTH), .ADDER_WIDTH(ADDER_WIDTH))
   uart_top_inst
-  ( .iClk(rClk), .iRst(rRst), .iBtn(riBtn), .iRx(wTxSerial), .oTx(wTx) );
+  ( .iClk(rClk), .iRst(rRst), .iRx(wTxSerial), .oTx(wTx) );
 
 
   wire [7:0] wRxByte;
@@ -112,13 +111,12 @@ end
  
   initial begin
     rTxStart = 0;
-//    rOpA = 128'h00000000_34343434_56565656_78787878;
-//    rOpB = 128'h00000000_c6545656_abababab_90909090;
-    rOpA = 128'h000000000000000000000000000000005;
-    rOpB = 128'h0000000000000000000000000000000060;
+    rOpA = 128'h00000000_34343434_56565656_78787878;
+    rOpB = 128'h00000000_c6545656_abababab_90909090;
+//    rOpA = 128'h000000000000000000000000000000005;
+//    rOpB = 128'h000000000000000000000000000000006;
     rTxByte = rOpA[127:120];
     rRst = 0;
-    riBtn = 0;
 
     #(CLOCK_PERIOD);
     
@@ -132,13 +130,14 @@ end
     rTxStart = 0;
 
     #(5000*CLOCK_PERIOD);
-$display("received value: %0d .... %0d", rFinalSum[128:0], rOpA-rOpB);
-    if (rFinalSum[127:0] == (rOpA-rOpB))
+$display("received value: %0d .... %0d", rFinalSum, {8'b1, (rOpA-rOpB)});
+    if (rFinalSum == {8'b1, (rOpA-rOpB)}) 
+    // 8 bits added in order to compare the same width regs.
         $display ("test succeeded");
     else
         $display ("test failed");
-   $display("binary value: %0b", rFinalSum[128:0]);
    $display("binary value: %0b", rFinalSum);
+   $display("binary value: %0b", {8'b1, rOpA-rOpB});
    $stop;
    end
 
