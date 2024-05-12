@@ -41,7 +41,7 @@ module uart_top #(
   // registers for storing ops and result.
   reg [NBYTES*8 - 1: 0] rA, rB;
   reg [(NBYTES + 1)*8 - 1: 0] rResult;
-  wire [(NBYTES)*8 : 0] wResult; // output of adder that will be stored in rResult when addition is done.
+  wire [(NBYTES + 1)*8 - 1: 0] wResult; // output of adder that will be stored in rResult when addition is done.
   reg rStartAdder;
   wire wAdderDone;
 
@@ -64,13 +64,12 @@ module uart_top #(
      .oRxByte(wRxByte),
      .oRxDone(wRxDone)); 
          
-  wire wiBtn = 1;
+       
   mp_adder #(.ADDER_WIDTH(ADDER_WIDTH), .OPERAND_WIDTH(OPERAND_WIDTH))
   MP_ADDER_INST
     (.iClk(iClk),
      .iRst(iRst),
      .iStart(rStartAdder),
-     .iBtn(wiBtn),
      .iOpA(rA),
      .iOpB(rB),
      .oRes(wResult),

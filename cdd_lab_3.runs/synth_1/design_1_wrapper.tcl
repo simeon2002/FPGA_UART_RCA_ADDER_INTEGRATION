@@ -71,6 +71,7 @@ proc create_report { reportName command } {
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
 set_param chipscope.maxJobs 4
+set_param xicom.use_bs_reader 1
 set_msg_config -id {HDL-1065} -limit 10000
 set_msg_config  -id {VRFC 10-3321}  -string {{ERROR: [VRFC 10-3321] external reference 'ADDER_WIDTH' remains unresolved [/home/sims0702/lab_1/lab_1.srcs/sim_1/new/ripple_carry_adder_Nb_TB.v:11]}}  -suppress 
 OPTRACE "Creating in-memory project" START { }

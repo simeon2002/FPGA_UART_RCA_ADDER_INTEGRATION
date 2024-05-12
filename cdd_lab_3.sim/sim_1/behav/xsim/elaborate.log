@@ -4,13 +4,13 @@ Running: /tools/Xilinx/Vivado/2020.1/bin/unwrapped/lnx64.o/xelab -wto 4756b1523e
 Using 8 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
-WARNING: [VRFC 10-2861] module 'carry_lookahead_adder' does not have a parameter named WIDTH [/home/sims0702/Documents/University/phase-3-courses/complex-digital-design/cdd_lab_3/cdd_lab_3.srcs/sources_1/new/carry_select_adder_cla.v:26]
-WARNING: [VRFC 10-2861] module 'carry_lookahead_adder' does not have a parameter named WIDTH [/home/sims0702/Documents/University/phase-3-courses/complex-digital-design/cdd_lab_3/cdd_lab_3.srcs/sources_1/new/carry_select_adder_cla.v:38]
-WARNING: [VRFC 10-2861] module 'carry_lookahead_adder' does not have a parameter named WIDTH [/home/sims0702/Documents/University/phase-3-courses/complex-digital-design/cdd_lab_3/cdd_lab_3.srcs/sources_1/new/carry_select_adder_cla.v:46]
-WARNING: [VRFC 10-3283] element index 7 into 'iA' is out of bounds [/home/sims0702/Documents/University/phase-3-courses/complex-digital-design/cdd_lab_3/cdd_lab_3.srcs/sources_1/new/carry_select_adder_cla.v:39]
-WARNING: [VRFC 10-3283] element index 7 into 'iB' is out of bounds [/home/sims0702/Documents/University/phase-3-courses/complex-digital-design/cdd_lab_3/cdd_lab_3.srcs/sources_1/new/carry_select_adder_cla.v:40]
-WARNING: [VRFC 10-3283] element index 7 into 'iA' is out of bounds [/home/sims0702/Documents/University/phase-3-courses/complex-digital-design/cdd_lab_3/cdd_lab_3.srcs/sources_1/new/carry_select_adder_cla.v:47]
-WARNING: [VRFC 10-3283] element index 7 into 'iB' is out of bounds [/home/sims0702/Documents/University/phase-3-courses/complex-digital-design/cdd_lab_3/cdd_lab_3.srcs/sources_1/new/carry_select_adder_cla.v:48]
-WARNING: [VRFC 10-3283] element index 7 into 'oSum' is out of bounds [/home/sims0702/Documents/University/phase-3-courses/complex-digital-design/cdd_lab_3/cdd_lab_3.srcs/sources_1/new/carry_select_adder_cla.v:59]
 Completed static elaboration
-INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.full_adder
+Compiling module xil_defaultlib.ripple_carry_adder_Nb_default
+Compiling module xil_defaultlib.mp_adder(OPERAND_WIDTH=8,ADDER_W...
+Compiling module xil_defaultlib.mp_adder_TB
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot mp_adder_TB_behav
